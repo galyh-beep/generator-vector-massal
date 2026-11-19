@@ -157,7 +157,7 @@ textarea:focus,input[type=text]:focus{outline:2px solid var(--accent);outline-of
 <div class="wrap">
   <header class="top">
     <h1>Generator Vector Massal<br>untuk Stock</h1>
-    <p class="lede">Halo Ardian — buat <strong>puluhan sampai ratusan vector SVG</strong> sekaligus untuk microstock. Sekarang bisa <strong>berdasarkan daftar prompt kamu sendiri</strong> (satu baris = satu desain), dengan <strong>nama batch kustom</strong>, pilihan <strong>gaya vector bawaan</strong>, dan <strong>gaya versi kamu sendiri</strong> — misalnya “ukiyo-e, tinta hitam dan merah” — yang jadi prioritas. Kini bisa <strong>diinstal sebagai aplikasi</strong> di Android &amp; laptop, lengkap dengan <strong>preset &amp; riwayat</strong>, <strong>SEO stock otomatis</strong> (Adobe / Shutterstock / Freepik / Canva), <strong>kurasi favorit sebelum ZIP</strong>, <strong>import prompt .txt/.csv</strong>, <strong>palet custom</strong>, dan <strong>cek duplikasi</strong>. Untuk <strong>ikon &amp; stiker</strong>, pilih <strong>latar belakang Transparan</strong> agar SVG &amp; PNG-nya tanpa latar dan siap ditempel di mana saja. Unduh satu per satu, atau <strong>semua sekaligus dalam satu file ZIP</strong> (SVG + PNG + daftar keyword untuk upload stock).</p>
+    <p class="lede">Halo Ardian — buat <strong>puluhan sampai ratusan vector SVG</strong> sekaligus untuk microstock. Sekarang bisa <strong>berdasarkan daftar prompt kamu sendiri</strong> (satu baris = satu desain), dengan <strong>nama batch kustom</strong>, pilihan <strong>gaya vector bawaan</strong>, dan <strong>gaya versi kamu sendiri</strong> — misalnya “ukiyo-e, tinta hitam dan merah” — yang jadi prioritas. Kini bisa <strong>diinstal sebagai aplikasi</strong> di Android &amp; laptop, lengkap dengan <strong>preset &amp; riwayat</strong>, <strong>SEO stock otomatis</strong> (Adobe / Shutterstock / Freepik / Canva / Vecteezy / Envato), <strong>kurasi favorit sebelum ZIP</strong>, <strong>import prompt .txt/.csv</strong>, <strong>palet custom</strong>, dan <strong>cek duplikasi</strong>. Untuk <strong>ikon &amp; stiker</strong>, pilih <strong>latar belakang Transparan</strong> agar SVG &amp; PNG-nya tanpa latar dan siap ditempel di mana saja. Unduh satu per satu, atau <strong>semua sekaligus dalam satu file ZIP</strong> (SVG + PNG + daftar keyword untuk upload stock).</p>
   </header>
 
   <div class="installbar" id="installBar">
@@ -323,7 +323,7 @@ textarea:focus,input[type=text]:focus{outline:2px solid var(--accent);outline-of
           <button type="button" data-v="svg" aria-pressed="true" data-tip="Sertakan file SVG di ZIP — vector yang bisa diedit dan diskalakan tanpa pecah.">SVG ✓</button>
           <button type="button" data-v="png" aria-pressed="true" data-tip="Sertakan file PNG di ZIP — gambar resolusi tinggi sesuai Resolusi Export PNG.">PNG ✓</button>
         </div>
-        <p class="hint" style="margin-top:8px">ZIP juga berisi <b>keywords.csv</b> (judul, prompt, gaya, batch + keyword stock per file), <b>prompts.txt</b> (khusus mode prompt), dan README lisensi. PNG dirender mengikuti pilihan Resolusi Export PNG (sampai 4000 px). ZIP juga berisi file SEO per platform: seo-adobe-stock.csv, seo-shutterstock.csv, seo-freepik.txt, seo-canva.txt.</p>
+        <p class="hint" style="margin-top:8px">ZIP juga berisi <b>keywords.csv</b> (judul, prompt, gaya, batch + keyword stock per file), <b>prompts.txt</b> (khusus mode prompt), dan README lisensi. PNG dirender mengikuti pilihan Resolusi Export PNG (sampai 4000 px). ZIP juga berisi file SEO per platform: seo-adobe-stock.csv, seo-shutterstock.csv, seo-freepik.txt, seo-canva.txt, seo-vecteezy.csv, seo-envato.txt.</p>
       </div>
 
       <div class="group">
@@ -367,6 +367,8 @@ textarea:focus,input[type=text]:focus{outline:2px solid var(--accent);outline-of
             <button type="button" data-v="shutterstock" data-tip="Shutterstock: deskripsi + maks. 50 keyword, kategori Illustrations.">Shutterstock</button>
             <button type="button" data-v="freepik" data-tip="Freepik: title maks. 100 karakter + maks. 30 tag.">Freepik</button>
             <button type="button" data-v="canva" data-tip="Canva: judul deskriptif + tag kata kunci. SVG &amp; PNG hasil generate bisa diunggah langsung ke Canva dan dipakai sebagai elemen, stiker, atau logo.">Canva</button>
+            <button type="button" data-v="vecteezy" data-tip="Vecteezy: judul deskriptif + maks. 50 keyword.">Vecteezy</button>
+            <button type="button" data-v="envato" data-tip="Envato Elements: judul + maks. 30 tag.">Envato</button>
           </div>
           <p class="hint" style="margin:8px 0 0" id="seoHint">Adobe Stock: judul ringkas + maks. 49 keyword koma. Tombol <b>📋 SEO</b> di tiap kartu menyalin judul + keyword sesuai platform ini. ZIP juga berisi file SEO terpisah per platform.</p>
           <div class="kwpreview" id="seoPreview">Generate dulu — pratinjau judul &amp; keyword file pertama akan muncul di sini.</div>
@@ -387,7 +389,7 @@ textarea:focus,input[type=text]:focus{outline:2px solid var(--accent);outline-of
           <li><b>Latar Transparan untuk ikon:</b> pilih <b>Latar belakang → Transparan</b> sebelum Generate, terutama di mode Dari Prompt. Hasilnya SVG tanpa rect latar dan PNG ber-alpha — ikon terlihat di galeri di atas pola papan catur dan siap ditempel ke desain, presentasi, atau paket ikon stock. Untuk background &amp; pola penuh, tetap pakai Latar Berwarna.</li>
           <li><b>Instal aplikasi:</b> pakai tombol <b>Instal Aplikasi</b> di bagian atas (Android Chrome: menu ⋮ → Instal aplikasi). Setelah terinstal, tools terbuka dari layar utama seperti aplikasi biasa.</li>
           <li><b>Preset &amp; riwayat:</b> simpan kombinasi gaya + palet + ukuran favoritmu sebagai preset, lalu pakai ulang dari daftar preset atau riwayat batch di perangkat ini.</li>
-          <li><b>SEO stock:</b> pilih platform (Adobe Stock / Shutterstock / Freepik / Canva) di panel SEO, lalu salin judul + keyword per kartu dengan tombol 📋 SEO. Di dalam ZIP ada <b>seo-adobe-stock.csv</b>, <b>seo-shutterstock.csv</b>, <b>seo-freepik.txt</b>, dan <b>seo-canva.txt</b>.</li>
+          <li><b>SEO stock:</b> pilih platform (Adobe Stock / Shutterstock / Freepik / Canva / Vecteezy / Envato) di panel SEO, lalu salin judul + keyword per kartu dengan tombol 📋 SEO. Di dalam ZIP ada <b>seo-adobe-stock.csv</b>, <b>seo-shutterstock.csv</b>, <b>seo-freepik.txt</b>, <b>seo-canva.txt</b>, <b>seo-vecteezy.csv</b>, dan <b>seo-envato.txt</b>.</li>
           <li><b>Canva &amp; platform grafis lain:</b> hasil generate (SVG + PNG) bisa dipakai di Canva, Figma, Adobe Illustrator, Affinity Designer, Inkscape, dan Vecteezy. Di Canva: buka desain → <b>Uploads → Upload files</b> → pilih file SVG atau PNG-nya, lalu pakai sebagai elemen, stiker, atau logo. PNG transparan paling cocok untuk stiker/logo. Catatan: ganti warna di Canva hanya jalan untuk SVG sederhana berisi warna flat; untuk edit vector penuh, buka SVG di Illustrator / Figma / Inkscape. Di panel SEO, pilih <b>Canva</b> untuk menyalin judul + tag yang sesuai, dan di dalam ZIP ada <b>seo-canva.txt</b>.</li>
           <li><b>Kurasi sebelum ZIP:</b> tandai ★ favorit, 🔒 kunci seed desain yang bagus agar tidak berubah saat regenerate, ↻ buat ulang satu kartu saja, ✕ hapus yang jelek — lalu unduh ZIP hanya berisi favorit.</li>
           <li><b>Import &amp; ukuran stock:</b> import daftar prompt dari file .txt/.csv, pilih rasio 1:1 / 4:5 / 16:9 / 3:2, dan export PNG sampai 4000 px.</li>
@@ -1262,10 +1264,12 @@ function buildZip(subset){
     zip.file("seo-shutterstock.csv", seoCsv(zipSource,"shutterstock"));
     zip.file("seo-freepik.txt", seoFreepikTxt(zipSource));
     zip.file("seo-canva.txt", seoCanvaTxt(zipSource));
+    zip.file("seo-vecteezy.csv", seoCsv(zipSource,"vecteezy"));
+    zip.file("seo-envato.txt", seoEnvatoTxt(zipSource));
     zip.file("README.txt",
 "GENERATOR VECTOR MASSAL — PAKET STOCK\n=====================================\n\n"+
 "Jumlah file : "+total+"\nNama batch  : "+(batchLabel||"(tanpa nama batch)")+"\nMode        : "+(state.modeUsed==="prompt"?"Dari Prompt":"Mode Cepat")+"\nGaya        : "+(state.lastStyleName||"-")+"\nLatar       : "+(state.lastTransparent?"Transparan — SVG tanpa rect latar, PNG dengan alpha. Cocok untuk ikon, stiker & elemen tempel.":"Berwarna — latar penuh sesuai palet/gaya")+"\nUkuran      : "+zipSource[0].w+" x "+zipSource[0].h+" px (SVG dapat diskalakan tanpa batas)\nTanggal     : "+new Date().toLocaleString("id-ID")+"\n\n"+
-"ISI PAKET\n- folder svg/  : file vector SVG siap upload / edit\n- folder png/  : preview PNG resolusi tinggi\n- keywords.csv : judul + keyword per file\n- seo-adobe-stock.csv / seo-shutterstock.csv / seo-freepik.txt / seo-canva.txt : judul + keyword terformat per platform\n\n"+
+"ISI PAKET\n- folder svg/  : file vector SVG siap upload / edit\n- folder png/  : preview PNG resolusi tinggi\n- keywords.csv : judul + keyword per file\n- seo-adobe-stock.csv / seo-shutterstock.csv / seo-freepik.txt / seo-canva.txt / seo-vecteezy.csv / seo-envato.txt : judul + keyword terformat per platform\n\n"+
 "CARA KE EPS (untuk Adobe Stock & Shutterstock)\nBuka file SVG di Adobe Illustrator atau Inkscape, lalu Save As / Export sebagai EPS 10.\n\n"+
 "Semua desain dalam paket ini digenerate secara prosedural dan unik per file.\n");
     setStatus("Mengompres ZIP…");
@@ -1287,6 +1291,8 @@ function seoKeywords(it,platform){
   if(platform==="shutterstock")kws=kws.slice(0,50);
   if(platform==="freepik")kws=kws.slice(0,30);
   if(platform==="canva")kws=kws.slice(0,50);
+  if(platform==="vecteezy")kws=kws.slice(0,50);
+  if(platform==="envato")kws=kws.slice(0,30);
   return kws;
 }
 function seoTitle(it,platform){
@@ -1300,6 +1306,8 @@ function seoText(it,platform){
   if(platform==="shutterstock")return "Judul/Deskripsi: "+seoTitle(it,platform)+"\nKeyword ("+kws.length+"): "+kws.join(", ");
   if(platform==="freepik")return "Title: "+seoTitle(it,platform)+"\nTags: "+kws.join(", ");
   if(platform==="canva")return "Title: "+seoTitle(it,platform)+"\nTags ("+kws.length+"): "+kws.join(", ");
+  if(platform==="vecteezy")return "Title: "+seoTitle(it,platform)+"\nKeywords ("+kws.length+"/50): "+kws.join(", ");
+  if(platform==="envato")return "Title: "+seoTitle(it,platform)+"\nTags ("+kws.length+"): "+kws.join(", ");
   return "Title: "+seoTitle(it,platform)+"\nKeywords ("+kws.length+"/49): "+kws.join(", ");
 }
 function seoCsv(items,platform){
@@ -1317,6 +1325,11 @@ function seoFreepikTxt(items){
 function seoCanvaTxt(items){
   var out="SEO CANVA — judul & tag per file\n==================================\nCara pakai: buka Canva > Uploads > Upload files, pilih file SVG atau PNG-nya, lalu pakai sebagai elemen, stiker, atau logo. PNG transparan paling cocok untuk stiker/logo. Ganti warna di Canva hanya jalan untuk SVG sederhana berisi warna flat.\n\n";
   items.forEach(function(it){out+=it.base+".svg\n"+seoText(it,"canva")+"\n\n";});
+  return out;
+}
+function seoEnvatoTxt(items){
+  var out="SEO ENVATO ELEMENTS — judul & tag per file\n==================================\n\n";
+  items.forEach(function(it){out+=it.base+".svg\n"+seoText(it,"envato")+"\n\n";});
   return out;
 }
 function copySeo(it){
@@ -1337,7 +1350,9 @@ $("seoSeg").querySelectorAll("button").forEach(function(b){b.addEventListener("c
   var hints={adobe:"Adobe Stock: judul ringkas + maks. 49 keyword koma. Tombol 📋 SEO di tiap kartu menyalin judul + keyword sesuai platform ini. ZIP juga berisi file SEO terpisah per platform.",
     shutterstock:"Shutterstock: deskripsi + maks. 50 keyword, kategori Illustrations. Tombol 📋 SEO di tiap kartu menyalin sesuai format ini.",
     freepik:"Freepik: title maks. 100 karakter + maks. 30 tag. Tombol 📋 SEO di tiap kartu menyalin sesuai format ini.",
-    canva:"Canva: judul deskriptif + tag kata kunci. SVG & PNG hasil generate bisa diunggah langsung ke Canva (menu Uploads) dan dipakai sebagai elemen, stiker, atau logo. ZIP juga berisi seo-canva.txt."};
+    canva:"Canva: judul deskriptif + tag kata kunci. SVG & PNG hasil generate bisa diunggah langsung ke Canva (menu Uploads) dan dipakai sebagai elemen, stiker, atau logo. ZIP juga berisi seo-canva.txt.",
+    vecteezy:"Vecteezy: judul deskriptif + maks. 50 keyword. Tombol 📋 SEO di tiap kartu menyalin sesuai format ini.",
+    envato:"Envato Elements: judul + maks. 30 tag. Tombol 📋 SEO di tiap kartu menyalin sesuai format ini."};
   $("seoHint").textContent=hints[state.seoPlatform];updateSeoPreview();
 })});
 
@@ -1503,7 +1518,9 @@ function loadStore(){
       var hints={adobe:"Adobe Stock: judul ringkas + maks. 49 keyword koma. Tombol \u{1F4CB} SEO di tiap kartu menyalin judul + keyword sesuai platform ini. ZIP juga berisi file SEO terpisah per platform.",
         shutterstock:"Shutterstock: deskripsi + maks. 50 keyword, kategori Illustrations. Tombol \u{1F4CB} SEO di tiap kartu menyalin sesuai format ini.",
         freepik:"Freepik: title maks. 100 karakter + maks. 30 tag. Tombol \u{1F4CB} SEO di tiap kartu menyalin sesuai format ini.",
-        canva:"Canva: judul deskriptif + tag kata kunci. SVG & PNG hasil generate bisa diunggah langsung ke Canva (menu Uploads) dan dipakai sebagai elemen, stiker, atau logo. ZIP juga berisi seo-canva.txt."};
+        canva:"Canva: judul deskriptif + tag kata kunci. SVG & PNG hasil generate bisa diunggah langsung ke Canva (menu Uploads) dan dipakai sebagai elemen, stiker, atau logo. ZIP juga berisi seo-canva.txt.",
+    vecteezy:"Vecteezy: judul deskriptif + maks. 50 keyword. Tombol 📋 SEO di tiap kartu menyalin sesuai format ini.",
+    envato:"Envato Elements: judul + maks. 30 tag. Tombol 📋 SEO di tiap kartu menyalin sesuai format ini."};
       $("seoHint").textContent=hints[state.seoPlatform]||hints.adobe;
     }
     renderPresets();renderHistoryList();updateSeoPreview();
