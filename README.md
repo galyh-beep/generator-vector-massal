@@ -9,25 +9,21 @@ Buat puluhan sampai ratusan vector SVG untuk microstock dari mode cepat atau daf
 - `icon-192.png` / `icon-512.png` — ikon aplikasi
 - `.nojekyll` — supaya GitHub Pages tidak memproses file dengan Jekyll
 
-## Cara pasang di GitHub Pages
-1. Buat repository baru di GitHub, misalnya `generator-vector-massal`.
-2. Upload semua file di folder ini ke repository (drag & drop di halaman repository, atau lewat `git push`).
-3. Buka **Settings > Pages**.
-4. Di **Build and deployment > Source**, pilih **Deploy from a branch**.
-5. Pilih branch `main` dan folder `/ (root)`, lalu **Save**.
-6. Tunggu 1-2 menit, lalu buka `https://<username>.github.io/<nama-repo>/`
+## Instal sebagai aplikasi
+**Android (Chrome)**
+1. Buka alamat GitHub Pages di Chrome.
+2. Ketuk menu titik tiga (⋮) di kanan atas → Instal aplikasi (atau Tambahkan ke Layar Utama).
+3. Ketuk Instal. Ikon "Vector Massal" muncul di layar utama dan bisa dibuka seperti aplikasi biasa, termasuk offline setelah pertama kali dibuka.
 
-Contoh: kalau username `ardian` dan repo `generator-vector-massal`, alamatnya:
-`https://ardian.github.io/generator-vector-massal/`
+**iPhone / iPad (Safari)**
+1. Buka alamatnya di Safari (harus Safari, bukan Chrome).
+2. Ketuk tombol Bagikan (kotak dengan panah ke atas) → Add to Home Screen.
+3. Ketuk Add. Ikon muncul di Home Screen.
 
-Tutorial langkah-demi-langkah yang lengkap (dari membuat akun GitHub sampai instal di HP) ada di file **Tutorial GitHub Pages — Generator Vector Massal** yang disertakan terpisah.
-
-## Cara instal di Android
-1. Buka alamat GitHub Pages di atas lewat **Chrome** di Android.
-2. Ketuk menu titik tiga > **Instal aplikasi** / **Tambahkan ke Layar Utama**.
-3. Aplikasi akan muncul seperti aplikasi biasa dan bisa dibuka offline setelah pertama kali dibuka.
-
-Di laptop: buka di Chrome/Edge, lalu klik ikon instal di address bar.
+**Laptop (Chrome / Edge)**
+1. Buka alamatnya di Chrome atau Edge.
+2. Klik ikon instal (gambar monitor + panah) di ujung kanan address bar → Install.
+3. Aplikasi terbuka di jendela sendiri, tanpa address bar.
 
 ## Yang baru di versi ini
 - **Preset & riwayat tersimpan di perangkat:** preset, palet custom, gaya custom, pengaturan terakhir, dan riwayat batch (maks 8) tersimpan di browser perangkat ini lewat localStorage — tetap ada setelah halaman ditutup dan dibuka lagi. Tidak tersinkron antar perangkat, dan di mode privat (incognito) penyimpanan bisa gagal tanpa pesan.
