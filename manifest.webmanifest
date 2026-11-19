@@ -1,0 +1,25 @@
+{
+  "background_color": "#f4f5f2",
+  "description": "Buat puluhan sampai ratusan vector SVG untuk microstock dari mode cepat atau daftar prompt, dengan gaya custom, latar transparan, SEO stock, dan unduhan ZIP.",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any",
+      "sizes": "192x192",
+      "src": "icon-192.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "icon-512.png",
+      "type": "image/png"
+    }
+  ],
+  "name": "Generator Vector Massal untuk Stock",
+  "orientation": "any",
+  "scope": "./",
+  "short_name": "Vector Massal",
+  "start_url": "./index.html",
+  "theme_color": "#0f766e"
+}
