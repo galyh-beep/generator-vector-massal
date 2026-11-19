@@ -166,7 +166,7 @@ textarea:focus,input[type=text]:focus{outline:2px solid var(--accent);outline-of
 <div class="wrap">
   <header class="top">
     <h1>Generator Vector Massal<br>untuk Stock</h1>
-    <p class="lede">Halo Ardian — buat <strong>puluhan sampai ratusan vector SVG</strong> sekaligus untuk microstock. Sekarang bisa <strong>berdasarkan daftar prompt kamu sendiri</strong> (satu baris = satu desain), dengan <strong>nama batch kustom</strong>, pilihan <strong>gaya vector bawaan</strong>, dan <strong>gaya versi kamu sendiri</strong> — misalnya “ukiyo-e, tinta hitam dan merah” — yang jadi prioritas. Kini bisa <strong>diinstal sebagai aplikasi</strong> di Android &amp; laptop, lengkap dengan <strong>rumusan prompt 7 unsur</strong>, <strong>preset &amp; riwayat</strong>, <strong>SEO stock otomatis</strong> (Adobe / Shutterstock / Freepik / Canva / Vecteezy / Envato), <strong>kurasi favorit sebelum ZIP</strong>, <strong>import prompt .txt/.csv</strong>, <strong>palet custom</strong>, dan <strong>cek duplikasi</strong>. Untuk <strong>ikon &amp; stiker</strong>, pilih <strong>latar belakang Transparan</strong> agar SVG &amp; PNG-nya tanpa latar dan siap ditempel di mana saja. Unduh satu per satu, atau <strong>semua sekaligus dalam satu file ZIP</strong> (SVG + PNG + daftar keyword untuk upload stock).</p>
+    <p class="lede">Halo Ardian — buat <strong>puluhan sampai ratusan vector SVG</strong> sekaligus untuk microstock. Sekarang bisa <strong>berdasarkan daftar prompt kamu sendiri</strong> (satu baris = satu desain, dari puluhan subjek yang dikenali), dengan <strong>nama batch kustom</strong>, pilihan <strong>gaya vector bawaan</strong>, dan <strong>gaya versi kamu sendiri</strong> — misalnya “ukiyo-e, tinta hitam dan merah” — yang jadi prioritas. Kini bisa <strong>diinstal sebagai aplikasi</strong> di Android &amp; laptop, lengkap dengan <strong>rumusan prompt 7 unsur</strong>, <strong>preset &amp; riwayat</strong>, <strong>SEO stock otomatis</strong> (Adobe / Shutterstock / Freepik / Canva / Vecteezy / Envato), <strong>kurasi favorit sebelum ZIP</strong>, <strong>import prompt .txt/.csv</strong>, <strong>palet custom</strong>, dan <strong>cek duplikasi</strong>. Untuk <strong>ikon &amp; stiker</strong>, pilih <strong>latar belakang Transparan</strong> agar SVG &amp; PNG-nya tanpa latar dan siap ditempel di mana saja. Unduh satu per satu, atau <strong>semua sekaligus dalam satu file ZIP</strong> (SVG + PNG + daftar keyword untuk upload stock).</p>
   </header>
 
   <div class="installbar" id="installBar">
@@ -219,7 +219,7 @@ textarea:focus,input[type=text]:focus{outline:2px solid var(--accent);outline-of
         <label class="filelabel" for="importFile">📥 Import prompt dari file .txt / .csv</label>
         <input type="file" id="importFile" accept=".txt,.csv,text/plain,text/csv" class="hidden">
         <p class="hint" id="importStatus" style="margin-top:6px">File .txt: satu prompt per baris. File .csv: kolom pertama tiap baris dipakai sebagai prompt. Hasil import ditambahkan ke daftar di atas.</p>
-        <p class="hint">Tiap baris menjadi 1 desain (dikali jumlah variasi di bawah). Subjek yang dikenali: kucing, anjing, burung, ikan/koi, kupu-kupu, bunga/sakura, pohon, gunung, pantai, ombak, matahari, bulan, bintang, rumah, kota, kopi, hati, gajah, roket, mobil, pesawat, naga, hutan. Prompt lain dibuatkan komposisi abstrak bertema dari kata-katanya.</p>
+        <p class="hint">Tiap baris menjadi 1 desain (dikali jumlah variasi di bawah). Kini lebih dari 70 subjek dikenali — hewan (kucing, singa, harimau, panda, kelinci, ayam, bebek, penguin, hiu, paus, penyu, lebah, ular, katak, …), alam (sakura, pelangi, api, daun, bintang laut, …), makanan (apel, pisang, jamur, stroberi), kendaraan (sepeda, kapal, kereta), dan benda (gitar, buku, payung, kamera, mahkota, robot, hantu). Prompt di luar daftar itu tetap dibuatkan komposisi emblem bertema dari kata-katanya — huruf awal subjek tampil di dalam lencana, lengkap dengan elemen setting &amp; suasana dari rumusan prompt.</p>
         <div class="specbox" id="specBox">
           <span class="glabel">Rumusan Prompt — 7 unsur</span>
           <p class="hint">Rumusnya: <b>Subjek + Warna + Aksi/Pose + Setting + Waktu &amp; Suasana + Gaya + Komposisi</b>. Makin lengkap promptmu, makin akurat hasilnya — tiap unsur benar-benar mengubah gambar (pose, warna subjek, setting, suasana), bukan sekadar teks.</p>
@@ -415,6 +415,7 @@ textarea:focus,input[type=text]:focus{outline:2px solid var(--accent);outline-of
           <li><b>SEO stock:</b> pilih platform (Adobe Stock / Shutterstock / Freepik / Canva / Vecteezy / Envato) di panel SEO, lalu salin judul + keyword per kartu dengan tombol 📋 SEO. Di dalam ZIP ada <b>seo-adobe-stock.csv</b>, <b>seo-shutterstock.csv</b>, <b>seo-freepik.txt</b>, <b>seo-canva.txt</b>, <b>seo-vecteezy.csv</b>, dan <b>seo-envato.txt</b>.</li>
           <li><b>Canva &amp; platform grafis lain:</b> hasil generate (SVG + PNG) bisa dipakai di Canva, Figma, Adobe Illustrator, Affinity Designer, Inkscape, dan Vecteezy. Di Canva: buka desain → <b>Uploads → Upload files</b> → pilih file SVG atau PNG-nya, lalu pakai sebagai elemen, stiker, atau logo. PNG transparan paling cocok untuk stiker/logo. Catatan: ganti warna di Canva hanya jalan untuk SVG sederhana berisi warna flat; untuk edit vector penuh, buka SVG di Illustrator / Figma / Inkscape. Di panel SEO, pilih <b>Canva</b> untuk menyalin judul + tag yang sesuai, dan di dalam ZIP ada <b>seo-canva.txt</b>.</li>
           <li><b>Kurasi sebelum ZIP:</b> tandai ★ favorit, 🔒 kunci seed desain yang bagus agar tidak berubah saat regenerate, ↻ buat ulang satu kartu saja, ✕ hapus yang jelek — lalu unduh ZIP hanya berisi favorit.</li>
+          <li><b>Subjek luas &amp; fallback umum:</b> lebih dari 70 subjek kini dikenali langsung — kalau promptmu di luar daftar itu (mis. “vas bunga antik” atau “menara jam”), hasilnya bukan lagi blob abstrak, melainkan <b>komposisi emblem</b>: lencana berisi huruf awal subjek, dengan warna, setting, dan suasana dari rumusan promptmu. Judul &amp; keyword stock-nya tetap terisi dari kata-kata prompt itu sendiri.</li>
           <li><b>Reset Generate:</b> tombol <b>↺ Reset Generate</b> di bawah panel Pengaturan mengosongkan galeri hasil dan mengembalikan semua pengaturan generate ke awal (mode, jenis, gaya, palet, ukuran, latar). Daftar prompt, preset, dan riwayat batch <b>tidak</b> ikut dihapus, jadi kamu bisa langsung generate ulang dari prompt yang sama.</li>
           <li><b>Import &amp; ukuran stock:</b> import daftar prompt dari file .txt/.csv, pilih rasio 1:1 / 4:5 / 16:9 / 3:2, dan export PNG sampai 4000 px.</li>
           <li><b>Palet custom &amp; duplikasi:</b> masukkan 5 warna brand kamu di Palet Custom, dan jalankan Cek Duplikasi — kartu yang terlalu mirip dalam satu batch ditandai agar bisa kamu regenerate atau hapus sebelum upload.</li>
@@ -685,14 +686,48 @@ function promptLines(){return $("promptList").value.split(/\n/).map(function(x){
 
 var SUBJECTS=[
  {id:"koi",label:"Ikan Koi",words:["koi"],kw:"koi fish illustration, japanese koi carp, oriental fish art"},
+ {id:"hiu",label:"Hiu",words:["hiu","shark"],kw:"shark illustration, ocean predator vector"},
+ {id:"paus",label:"Paus",words:["paus","whale"],kw:"whale illustration, ocean mammal vector"},
+ {id:"lumba",label:"Lumba-lumba",words:["lumba","lumba-lumba","dolphin"],kw:"dolphin illustration, sea mammal vector"},
+ {id:"penyu",label:"Penyu",words:["penyu","turtle","kura-kura"],kw:"sea turtle illustration, ocean animal vector"},
+ {id:"ubur",label:"Ubur-ubur",words:["ubur","ubur-ubur","jellyfish"],kw:"jellyfish illustration, sea creature vector"},
+ {id:"gurita",label:"Gurita",words:["gurita","octopus"],kw:"octopus illustration, sea creature vector"},
+ {id:"bintanglaut",label:"Bintang Laut",words:["bintang laut","starfish"],kw:"starfish illustration, sea star vector"},
+ {id:"burunghantu",label:"Burung Hantu",words:["burung hantu","owl"],kw:"owl illustration, wise bird vector"},
  {id:"kucing",label:"Kucing",words:["kucing","cat","kitten"],kw:"cute cat illustration, pet animal vector"},
  {id:"anjing",label:"Anjing",words:["anjing","dog","puppy"],kw:"cute dog illustration, pet animal vector"},
+ {id:"singa",label:"Singa",words:["singa","lion"],kw:"lion illustration, king of jungle, safari animal vector"},
+ {id:"harimau",label:"Harimau",words:["harimau","tiger","macan"],kw:"tiger illustration, wild jungle animal vector"},
+ {id:"zebra",label:"Zebra",words:["zebra"],kw:"zebra illustration, african safari animal vector"},
+ {id:"kuda",label:"Kuda",words:["kuda","horse"],kw:"horse illustration, farm animal vector"},
+ {id:"rusa",label:"Rusa",words:["rusa","deer"],kw:"deer illustration, forest animal vector"},
+ {id:"sapi",label:"Sapi",words:["sapi","cow"],kw:"cow illustration, farm animal vector"},
+ {id:"beruang",label:"Beruang",words:["beruang","bear"],kw:"bear illustration, forest animal vector"},
+ {id:"rubah",label:"Rubah",words:["rubah","fox"],kw:"fox illustration, forest animal vector"},
+ {id:"serigala",label:"Serigala",words:["serigala","wolf"],kw:"wolf illustration, wild animal vector"},
+ {id:"kelinci",label:"Kelinci",words:["kelinci","rabbit","bunny"],kw:"rabbit bunny illustration, cute pet vector"},
+ {id:"panda",label:"Panda",words:["panda"],kw:"panda illustration, cute bamboo bear vector"},
+ {id:"monyet",label:"Monyet",words:["monyet","monkey"],kw:"monkey illustration, jungle animal vector"},
+ {id:"babi",label:"Babi",words:["babi","pig"],kw:"pig illustration, farm animal vector"},
+ {id:"domba",label:"Domba",words:["domba","sheep","kambing","goat"],kw:"sheep illustration, farm animal vector"},
+ {id:"landak",label:"Landak",words:["landak","hedgehog"],kw:"hedgehog illustration, cute animal vector"},
+ {id:"tupai",label:"Tupai",words:["tupai","squirrel"],kw:"squirrel illustration, forest animal vector"},
+ {id:"ayam",label:"Ayam",words:["ayam","chicken","hen"],kw:"chicken hen illustration, farm animal vector"},
+ {id:"bebek",label:"Bebek",words:["bebek","duck"],kw:"duck illustration, farm bird vector"},
+ {id:"penguin",label:"Penguin",words:["penguin","pinguin"],kw:"penguin illustration, antarctic bird vector"},
  {id:"burung",label:"Burung",words:["burung","bird"],kw:"bird on branch illustration, nature bird vector"},
  {id:"ikan",label:"Ikan",words:["ikan","fish"],kw:"fish illustration, underwater sea life vector"},
+ {id:"lebah",label:"Lebah",words:["lebah","bee"],kw:"bee illustration, honey insect vector"},
+ {id:"semut",label:"Semut",words:["semut","ant"],kw:"ant illustration, insect vector"},
  {id:"kupu",label:"Kupu-kupu",words:["kupu","butterfly"],kw:"butterfly illustration, colorful insect vector"},
+ {id:"ular",label:"Ular",words:["ular","snake"],kw:"snake illustration, reptile vector"},
+ {id:"katak",label:"Katak",words:["katak","frog","kodok"],kw:"frog illustration, amphibian vector"},
  {id:"sakura",label:"Sakura",words:["sakura","cherry blossom"],kw:"sakura cherry blossom illustration, japanese spring flowers"},
  {id:"bunga",label:"Bunga",words:["bunga","flower","mawar","rose","tulip"],kw:"flower illustration, floral botanical vector"},
  {id:"pohon",label:"Pohon",words:["pohon","tree"],kw:"tree illustration, nature landscape vector"},
+ {id:"daun",label:"Daun",words:["daun","leaf","leaves"],kw:"leaf illustration, botanical vector"},
+ {id:"api",label:"Api",words:["api","fire","flame"],kw:"fire flame illustration, hot burn vector"},
+ {id:"pelangi",label:"Pelangi",words:["pelangi","rainbow"],kw:"rainbow illustration, colorful sky vector"},
  {id:"gunung",label:"Gunung",words:["gunung","mountain","pegunungan"],kw:"mountain landscape illustration, nature scenery vector"},
  {id:"pantai",label:"Pantai & Laut",words:["pantai","beach"],kw:"beach seascape illustration, tropical ocean vector"},
  {id:"ombak",label:"Ombak",words:["ombak","wave","tsunami"],kw:"ocean wave illustration, great wave vector"},
@@ -708,12 +743,36 @@ var SUBJECTS=[
  {id:"mobil",label:"Mobil",words:["mobil","car"],kw:"car illustration, vehicle transport vector"},
  {id:"pesawat",label:"Pesawat",words:["pesawat","plane","airplane","terbang"],kw:"airplane illustration, travel aviation vector"},
  {id:"naga",label:"Naga",words:["naga","dragon"],kw:"dragon illustration, mythical creature vector"},
- {id:"hutan",label:"Hutan",words:["hutan","forest","rimba"],kw:"forest illustration, pine trees nature vector"}
+ {id:"hutan",label:"Hutan",words:["hutan","forest","rimba"],kw:"forest illustration, pine trees nature vector"},
+ {id:"apel",label:"Apel",words:["apel","apple"],kw:"apple fruit illustration, fresh food vector"},
+ {id:"pisang",label:"Pisang",words:["pisang","banana"],kw:"banana fruit illustration, tropical food vector"},
+ {id:"jamur",label:"Jamur",words:["jamur","mushroom"],kw:"mushroom illustration, forest food vector"},
+ {id:"stroberi",label:"Stroberi",words:["stroberi","strawberry"],kw:"strawberry fruit illustration, berry vector"},
+ {id:"sepeda",label:"Sepeda",words:["sepeda","bicycle","bike"],kw:"bicycle illustration, cycling transport vector"},
+ {id:"kapal",label:"Kapal",words:["kapal","ship","boat","perahu"],kw:"ship boat illustration, sea transport vector"},
+ {id:"kereta",label:"Kereta",words:["kereta","train"],kw:"train illustration, railway transport vector"},
+ {id:"gitar",label:"Gitar",words:["gitar","guitar"],kw:"guitar illustration, music instrument vector"},
+ {id:"buku",label:"Buku",words:["buku","book"],kw:"book illustration, education reading vector"},
+ {id:"payung",label:"Payung",words:["payung","umbrella"],kw:"umbrella illustration, rain protection vector"},
+ {id:"kamera",label:"Kamera",words:["kamera","camera"],kw:"camera illustration, photography vector"},
+ {id:"mahkota",label:"Mahkota",words:["mahkota","crown"],kw:"crown illustration, royal king vector"},
+ {id:"robot",label:"Robot",words:["robot"],kw:"robot illustration, technology vector"},
+ {id:"hantu",label:"Hantu",words:["hantu","ghost"],kw:"ghost illustration, halloween spooky vector"}
 ];
+function wordHit(t,w){
+  if(w.length>4)return t.indexOf(w)>=0;
+  var i=t.indexOf(w);
+  while(i>=0){
+    var before=t.charAt(i-1),after=t.charAt(i+w.length);
+    if((before===""||/[^a-z]/.test(before))&&(after===""||/[^a-z]/.test(after)))return true;
+    i=t.indexOf(w,i+1);
+  }
+  return false;
+}
 function detectSubject(prompt){
   var t=" "+prompt.toLowerCase()+" ";
   for(var i=0;i<SUBJECTS.length;i++){var s=SUBJECTS[i];
-    for(var j=0;j<s.words.length;j++){if(t.indexOf(s.words[j])>=0)return s}}
+    for(var j=0;j<s.words.length;j++){if(wordHit(t,s.words[j]))return s}}
   return {id:"abstrak",label:"Komposisi Bertema",words:[],kw:"abstract themed illustration, decorative composition vector"};
 }
 
@@ -725,7 +784,7 @@ function detectSubject(prompt){
    matahari/bulan/bintang/hujan, komposisi mengubah skala subjek. */
 var PROMPT_COLORS=[["merah muda","#e5989b","merah muda"],["oren","#e76f51","oren"],["orange","#e76f51","oren"],["merah","#c1272d","merah"],["red","#c1272d","merah"],["biru","#1d4e89","biru"],["blue","#1d4e89","biru"],["pink","#e5989b","pink"],["emas","#c9a227","emas"],["gold","#c9a227","emas"],["hitam","#161616","hitam"],["black","#161616","hitam"],["putih","#f7f3ea","putih"],["white","#f7f3ea","putih"],["hijau","#2d6a4f","hijau"],["green","#2d6a4f","hijau"],["kuning","#f2c230","kuning"],["yellow","#f2c230","kuning"],["ungu","#5b2a86","ungu"],["purple","#5b2a86","ungu"],["cokelat","#6b4226","cokelat"],["coklat","#6b4226","cokelat"],["brown","#6b4226","cokelat"],["abu","#8a8a8a","abu-abu"],["tosca","#2a9d8f","tosca"],["teal","#2a9d8f","tosca"],["marun","#7b1e26","marun"],["krem","#e9dcc3","krem"],["cream","#e9dcc3","krem"]];
 var PROMPT_ACTIONS=[["duduk","duduk","sitting",0,0.05,1],["berdiri","berdiri","standing",0,-0.02,1],["berlari","berlari","running",-12,0,1],["lari","berlari","running",-12,0,1],["terbang","terbang","flying",-8,-0.12,1],["meluncur","meluncur","launching",-8,-0.12,1],["melompat","melompat","jumping",-6,-0.10,1],["lompat","melompat","jumping",-6,-0.10,1],["tidur","tidur","sleeping",0,0.08,0.95],["berenang","berenang","swimming",-10,0.02,1],["bermain","bermain","playing",5,0,1],["main","bermain","playing",5,0,1],["berjalan","berjalan","walking",-4,0,1],["jalan","berjalan","walking",-4,0,1],["memanjat","memanjat","climbing",8,-0.04,1],["makan","makan","eating",4,0.03,1],["menari","menari","dancing",6,-0.03,1],["melayang","melayang","floating",0,-0.14,1],["bersantai","bersantai","relaxing",0,0.05,1],["santai","bersantai","relaxing",0,0.05,1]];
-var PROMPT_SETTINGS=[["sakura","sakura","cherry blossom"],["pantai","pantai","beach"],["laut","laut","ocean sea"],["hutan","hutan","forest"],["taman","taman","garden"],["kolam","kolam","pond"],["gunung","gunung","mountain"],["kota","kota","city"],["langit","langit","sky"],["padang","padang","meadow"],["rumah","rumah","home"],["kafe","kafe","cafe"],["sawah","sawah","rice field"],["sungai","sungai","river"],["gurun","gurun","desert"],["salju","salju","snow"],["pasar","pasar","market"]];
+var PROMPT_SETTINGS=[["sakura","sakura","cherry blossom"],["pantai","pantai","beach"],["laut","laut","ocean sea"],["hutan","hutan","forest"],["taman","taman","garden"],["kolam","kolam","pond"],["gunung","gunung","mountain"],["kota","kota","city"],["langit","langit","sky"],["padang","padang","meadow"],["savana","padang","savanna"],["rumah","rumah","home"],["kafe","kafe","cafe"],["sawah","sawah","rice field"],["sungai","sungai","river"],["gurun","gurun","desert"],["salju","salju","snow"],["pasar","pasar","market"]];
 var PROMPT_TIMES=[["pagi","pagi","morning"],["siang","siang","midday"],["sore","sore","afternoon"],["senja","senja","sunset"],["malam","malam","night"],["cerah","cerah","sunny"],["hujan","hujan","rainy"]];
 var PROMPT_MOODS=[["ceria","ceria","cheerful"],["tenang","tenang","calm"],["damai","tenang","calm"],["misterius","misterius","mysterious"],["romantis","romantis","romantic"],["sunyi","sunyi","quiet"]];
 var PROMPT_COMPS=[["close-up","close-up","close-up portrait"],["close up","close-up","close-up portrait"],["dekat","close-up","close-up portrait"],["tengah","tengah","centered composition"],["simetris","simetris","symmetrical composition"],["penuh","penuh","full frame"],["minimal","minimal","minimal composition"],["sederhana","minimal","minimal composition"],["ramai","ramai","detailed busy composition"],["detail","ramai","detailed busy composition"]];
@@ -852,8 +911,272 @@ function injectOverlay(svg,r,w,h,eff,pal){
   return svg.replace("</svg>",ov+frame+"</svg>");
 }
 
+
+/* ---------- Gambar subjek umum: template parametrik ----------
+   Supaya satu fungsi bisa menggambar banyak spesies/benda: quadruped
+   (hewan berkaki empat) dengan opsi surai/belang/bintik/tanduk/telinga,
+   burung, hewan laut, serangga, makanan, kendaraan, benda, dan alam. */
+function drawQuad(r,w,h,pal,eff,o){
+  var u=Math.min(w,h),cx=w/2,cy=h/2;
+  var c0=o.body||pal[0],c1=pal[1%pal.length],c2=o.stripeCol||pal[2%pal.length],cL=pal[pal.length-1];
+  var sw=eff.thick?u*0.014:(eff.thin?u*0.004:u*0.008);
+  var st=eff.stroke?' stroke="'+eff.stroke+'" stroke-width="'+sw.toFixed(1)+'" stroke-linejoin="round" stroke-linecap="round"':'';
+  var op=eff.soft?' opacity="0.82"':'';
+  var legH=(o.longLegs?u*0.22:u*0.13),legY=cy+u*0.1;
+  var B='<ellipse cx="'+cx+'" cy="'+(cy+u*0.3)+'" rx="'+(u*0.34)+'" ry="'+(u*0.05)+'" fill="'+c0+'" opacity="0.25"/>';
+  if(o.bigTail)B+='<ellipse cx="'+(cx-u*0.26)+'" cy="'+(cy-u*0.02)+'" rx="'+(u*0.05)+'" ry="'+(u*0.12)+'" fill="'+c1+'"'+st+' transform="rotate(24 '+(cx-u*0.26)+' '+(cy-u*0.02)+')"/>';
+  else B+='<path d="M'+(cx-u*0.19)+','+(cy+u*0.02)+' Q'+(cx-u*0.33)+','+(cy-u*0.02)+' '+(cx-u*0.3)+','+(cy-u*0.14)+'" fill="none" stroke="'+c0+'" stroke-width="'+(u*0.035)+'" stroke-linecap="round"/>';
+  var lx=[-0.13,-0.05,0.07,0.15];
+  for(var li=0;li<4;li++){B+='<rect x="'+(cx+u*lx[li]-u*0.022)+'" y="'+legY+'" width="'+(u*0.045)+'" height="'+legH+'" fill="'+c0+'"'+st+'/>';}
+  B+='<ellipse cx="'+cx+'" cy="'+(cy+u*0.02)+'" rx="'+(u*0.2)+'" ry="'+(u*0.13)+'" fill="'+c0+'"'+st+op+'/>';
+  if(o.wool){for(var wq=0;wq<7;wq++)B+='<circle cx="'+(cx+u*(-0.14+wq*0.045))+'" cy="'+(cy-u*0.02+((wq%2)?u*0.03:-u*0.02))+'" r="'+(u*0.045)+'" fill="'+cL+'"'+st+'/>';}
+  if(o.spikes){for(var sq=0;sq<5;sq++){var sx=cx-u*0.14+sq*u*0.07;B+='<polygon points="'+sx+','+(cy-u*0.1)+' '+(sx-u*0.03)+','+(cy-u*0.02)+' '+(sx+u*0.03)+','+(cy-u*0.02)+'" fill="'+c2+'"'+st+'/>';}}
+  if(o.stripes){for(var tq=0;tq<4;tq++){var bxq=cx-u*0.12+tq*u*0.07;B+='<path d="M'+bxq+','+(cy-u*0.09)+' Q'+(bxq+u*0.02)+','+cy+' '+bxq+','+(cy+u*0.1)+'" fill="none" stroke="'+c2+'" stroke-width="'+(u*0.02)+'" opacity="0.85"/>';}}
+  if(o.spots){[[-0.1,-0.03,0.035],[0.02,0.05,0.028],[0.1,-0.05,0.03],[-0.02,-0.07,0.022]].forEach(function(pp){B+='<circle cx="'+(cx+u*pp[0])+'" cy="'+(cy+u*pp[1])+'" r="'+(u*pp[2])+'" fill="'+c2+'" opacity="0.85"/>';});}
+  var hx=cx+u*0.2,hy=cy-u*0.08;
+  if(o.mane)B+='<circle cx="'+hx+'" cy="'+hy+'" r="'+(u*0.15)+'" fill="'+(o.maneCol||c1)+'"'+st+'/>';
+  B+='<circle cx="'+hx+'" cy="'+hy+'" r="'+(u*0.1)+'" fill="'+c0+'"'+st+op+'/>';
+  if(o.longEars){B+='<ellipse cx="'+(hx-u*0.06)+'" cy="'+(hy-u*0.14)+'" rx="'+(u*0.028)+'" ry="'+(u*0.07)+'" fill="'+c0+'"'+st+' transform="rotate(-12 '+(hx-u*0.06)+' '+(hy-u*0.14)+')"/><ellipse cx="'+(hx+u*0.05)+'" cy="'+(hy-u*0.14)+'" rx="'+(u*0.028)+'" ry="'+(u*0.07)+'" fill="'+c0+'"'+st+' transform="rotate(12 '+(hx+u*0.05)+' '+(hy-u*0.14)+')"/>';}
+  else if(o.earRound){B+='<circle cx="'+(hx-u*0.07)+'" cy="'+(hy-u*0.08)+'" r="'+(u*0.04)+'" fill="'+c0+'"'+st+'/><circle cx="'+(hx+u*0.07)+'" cy="'+(hy-u*0.08)+'" r="'+(u*0.04)+'" fill="'+c0+'"'+st+'/>';}
+  else{B+='<polygon points="'+(hx-u*0.09)+','+(hy-u*0.05)+' '+(hx-u*0.08)+','+(hy-u*0.14)+' '+(hx-u*0.02)+','+(hy-u*0.08)+'" fill="'+c0+'"'+st+'/><polygon points="'+(hx+u*0.09)+','+(hy-u*0.05)+' '+(hx+u*0.08)+','+(hy-u*0.14)+' '+(hx+u*0.02)+','+(hy-u*0.08)+'" fill="'+c0+'"'+st+'/>';}
+  if(o.antlers){B+='<path d="M'+(hx-u*0.05)+','+(hy-u*0.09)+' L'+(hx-u*0.1)+','+(hy-u*0.22)+' M'+(hx-u*0.08)+','+(hy-u*0.17)+' L'+(hx-u*0.14)+','+(hy-u*0.19)+' M'+(hx+u*0.05)+','+(hy-u*0.09)+' L'+(hx+u*0.1)+','+(hy-u*0.22)+' M'+(hx+u*0.08)+','+(hy-u*0.17)+' L'+(hx+u*0.14)+','+(hy-u*0.19)+'" fill="none" stroke="'+(eff.stroke||c2)+'" stroke-width="'+(u*0.012)+'" stroke-linecap="round"/>';}
+  if(o.horns){B+='<polygon points="'+(hx-u*0.06)+','+(hy-u*0.08)+' '+(hx-u*0.04)+','+(hy-u*0.16)+' '+(hx-u*0.01)+','+(hy-u*0.08)+'" fill="'+cL+'"'+st+'/><polygon points="'+(hx+u*0.06)+','+(hy-u*0.08)+' '+(hx+u*0.04)+','+(hy-u*0.16)+' '+(hx+u*0.01)+','+(hy-u*0.08)+'" fill="'+cL+'"'+st+'/>';}
+  if(o.patches){B+='<ellipse cx="'+(hx-u*0.04)+'" cy="'+(hy-u*0.02)+'" rx="'+(u*0.028)+'" ry="'+(u*0.038)+'" fill="#161616" transform="rotate(-18 '+(hx-u*0.04)+' '+(hy-u*0.02)+')"/><ellipse cx="'+(hx+u*0.045)+'" cy="'+(hy-u*0.02)+'" rx="'+(u*0.028)+'" ry="'+(u*0.038)+'" fill="#161616" transform="rotate(18 '+(hx+u*0.045)+' '+(hy-u*0.02)+')"/>';}
+  B+='<circle cx="'+(hx-u*0.038)+'" cy="'+(hy-u*0.02)+'" r="'+(u*0.012)+'" fill="'+(o.patches?cL:"#161616")+'"/><circle cx="'+(hx+u*0.045)+'" cy="'+(hy-u*0.02)+'" r="'+(u*0.012)+'" fill="'+(o.patches?cL:"#161616")+'"/>';
+  if(o.snout){B+='<ellipse cx="'+(hx+u*0.05)+'" cy="'+(hy+u*0.035)+'" rx="'+(u*0.05)+'" ry="'+(u*0.032)+'" fill="'+c1+'"'+st+'/><ellipse cx="'+(hx+u*0.06)+'" cy="'+(hy+u*0.02)+'" rx="'+(u*0.02)+'" ry="'+(u*0.013)+'" fill="#161616"/>';}
+  else{B+='<ellipse cx="'+(hx+u*0.04)+'" cy="'+(hy+u*0.04)+'" rx="'+(u*0.028)+'" ry="'+(u*0.018)+'" fill="'+c1+'"/>';}
+  return B;
+}
+function drawBird2(r,w,h,pal,eff,o){
+  var u=Math.min(w,h),cx=w/2,cy=h/2;
+  var c0=pal[0],c1=pal[1%pal.length],c2=pal[2%pal.length],cL=pal[pal.length-1];
+  var sw=eff.thick?u*0.014:(eff.thin?u*0.004:u*0.008);
+  var st=eff.stroke?' stroke="'+eff.stroke+'" stroke-width="'+sw.toFixed(1)+'" stroke-linejoin="round" stroke-linecap="round"':'';
+  var op=eff.soft?' opacity="0.82"':'';
+  var bodyCol=o.tuxedo?"#20242a":c0;
+  var B='<ellipse cx="'+cx+'" cy="'+(cy+u*0.3)+'" rx="'+(u*0.3)+'" ry="'+(u*0.045)+'" fill="'+c0+'" opacity="0.25"/>';
+  B+='<ellipse cx="'+cx+'" cy="'+cy+'" rx="'+(u*0.17)+'" ry="'+(u*0.13)+'" fill="'+bodyCol+'"'+st+op+'/>';
+  if(o.tuxedo)B+='<ellipse cx="'+cx+'" cy="'+(cy+u*0.03)+'" rx="'+(u*0.1)+'" ry="'+(u*0.09)+'" fill="'+cL+'"/>';
+  B+='<ellipse cx="'+(cx-u*0.05)+'" cy="'+(cy+u*0.01)+'" rx="'+(u*0.09)+'" ry="'+(u*0.05)+'" fill="'+(o.tuxedo?"#20242a":c1)+'"'+st+' transform="rotate(-18 '+(cx-u*0.05)+' '+(cy+u*0.01)+')"/>';
+  var hx=cx+u*0.13,hy=cy-u*0.1;
+  B+='<circle cx="'+hx+'" cy="'+hy+'" r="'+(u*0.07)+'" fill="'+bodyCol+'"'+st+'/>';
+  if(o.owl){B+='<polygon points="'+(hx-u*0.05)+','+(hy-u*0.05)+' '+(hx-u*0.07)+','+(hy-u*0.12)+' '+(hx-u*0.01)+','+(hy-u*0.07)+'" fill="'+bodyCol+'"'+st+'/><polygon points="'+(hx+u*0.05)+','+(hy-u*0.05)+' '+(hx+u*0.07)+','+(hy-u*0.12)+' '+(hx+u*0.01)+','+(hy-u*0.07)+'" fill="'+bodyCol+'"'+st+'/>';}
+  if(o.flatBeak)B+='<ellipse cx="'+(hx+u*0.08)+'" cy="'+hy+'" rx="'+(u*0.045)+'" ry="'+(u*0.02)+'" fill="'+c2+'"'+st+'/>';
+  else B+='<polygon points="'+(hx+u*0.06)+','+(hy-u*0.01)+' '+(hx+u*0.13)+','+hy+' '+(hx+u*0.06)+','+(hy+u*0.015)+'" fill="'+c2+'"'+st+'/>';
+  if(o.comb){B+='<circle cx="'+hx+'" cy="'+(hy-u*0.07)+'" r="'+(u*0.025)+'" fill="'+c2+'"/><circle cx="'+(hx-u*0.03)+'" cy="'+(hy-u*0.06)+'" r="'+(u*0.02)+'" fill="'+c2+'"/><circle cx="'+(hx+u*0.03)+'" cy="'+(hy-u*0.06)+'" r="'+(u*0.02)+'" fill="'+c2+'"/>';}
+  if(o.owl){B+='<circle cx="'+(hx-u*0.025)+'" cy="'+(hy-u*0.01)+'" r="'+(u*0.028)+'" fill="'+cL+'"/><circle cx="'+(hx+u*0.03)+'" cy="'+(hy-u*0.01)+'" r="'+(u*0.028)+'" fill="'+cL+'"/><circle cx="'+(hx-u*0.025)+'" cy="'+(hy-u*0.01)+'" r="'+(u*0.012)+'" fill="#161616"/><circle cx="'+(hx+u*0.03)+'" cy="'+(hy-u*0.01)+'" r="'+(u*0.012)+'" fill="#161616"/>';}
+  else B+='<circle cx="'+(hx+u*0.02)+'" cy="'+(hy-u*0.015)+'" r="'+(u*0.011)+'" fill="'+cL+'"/>';
+  B+='<path d="M'+(cx-u*0.04)+','+(cy+u*0.13)+' L'+(cx-u*0.04)+','+(cy+u*0.2)+' M'+(cx+u*0.04)+','+(cy+u*0.13)+' L'+(cx+u*0.04)+','+(cy+u*0.2)+'" stroke="'+(eff.stroke||c0)+'" stroke-width="'+(u*0.01)+'"/>';
+  return B;
+}
+function drawSea(r,w,h,pal,eff,o){
+  var u=Math.min(w,h),cx=w/2,cy=h/2;
+  var c0=pal[0],c1=pal[1%pal.length],c2=pal[2%pal.length],cL=pal[pal.length-1];
+  var sw=eff.thick?u*0.014:(eff.thin?u*0.004:u*0.008);
+  var st=eff.stroke?' stroke="'+eff.stroke+'" stroke-width="'+sw.toFixed(1)+'" stroke-linejoin="round" stroke-linecap="round"':'';
+  var op=eff.soft?' opacity="0.82"':'';
+  var B="";
+  if(o.jelly){
+    B+='<path d="M'+(cx-u*0.16)+','+cy+' A'+(u*0.16)+' '+(u*0.16)+' 0 0 1 '+(cx+u*0.16)+','+cy+' Z" fill="'+c1+'"'+st+op+'/>';
+    for(var tj=0;tj<5;tj++){var tx=cx-u*0.12+tj*u*0.06;B+='<path d="M'+tx+','+cy+' Q'+(tx+u*0.02)+','+(cy+u*0.12)+' '+tx+','+(cy+u*0.2)+'" fill="none" stroke="'+c0+'" stroke-width="'+(u*0.012)+'" stroke-linecap="round"/>';}
+    B+='<circle cx="'+(cx-u*0.05)+'" cy="'+(cy-u*0.06)+'" r="'+(u*0.015)+'" fill="'+cL+'"/><circle cx="'+(cx+u*0.05)+'" cy="'+(cy-u*0.04)+'" r="'+(u*0.012)+'" fill="'+cL+'"/>';
+    return B;
+  }
+  if(o.octo){
+    B+='<path d="M'+(cx-u*0.17)+','+cy+' A'+(u*0.17)+' '+(u*0.17)+' 0 0 1 '+(cx+u*0.17)+','+cy+' Z" fill="'+c1+'"'+st+op+'/>';
+    for(var to=0;to<6;to++){var ox=cx-u*0.14+to*u*0.056;B+='<path d="M'+ox+','+cy+' Q'+(ox+u*0.03)+','+(cy+u*0.14)+' '+(ox-u*0.01)+','+(cy+u*0.22)+'" fill="none" stroke="'+c0+'" stroke-width="'+(u*0.022)+'" stroke-linecap="round"/>';}
+    B+='<circle cx="'+(cx-u*0.05)+'" cy="'+(cy-u*0.07)+'" r="'+(u*0.014)+'" fill="'+cL+'"/><circle cx="'+(cx+u*0.05)+'" cy="'+(cy-u*0.07)+'" r="'+(u*0.014)+'" fill="'+cL+'"/>';
+    return B;
+  }
+  if(o.turtle){
+    B+='<ellipse cx="'+cx+'" cy="'+(cy+u*0.02)+'" rx="'+(u*0.2)+'" ry="'+(u*0.12)+'" fill="'+c1+'"'+st+op+'/>';
+    B+='<ellipse cx="'+cx+'" cy="'+(cy-u*0.02)+'" rx="'+(u*0.13)+'" ry="'+(u*0.08)+'" fill="'+c0+'"'+st+'/>';
+    B+='<circle cx="'+(cx+u*0.21)+'" cy="'+(cy-u*0.04)+'" r="'+(u*0.06)+'" fill="'+c0+'"'+st+'/>';
+    B+='<circle cx="'+(cx+u*0.23)+'" cy="'+(cy-u*0.06)+'" r="'+(u*0.01)+'" fill="'+cL+'"/>';
+    [[-0.14,0.1],[0.14,0.1],[-0.14,-0.1],[0.14,-0.1]].forEach(function(fp){B+='<ellipse cx="'+(cx+u*fp[0])+'" cy="'+(cy+u*fp[1])+'" rx="'+(u*0.05)+'" ry="'+(u*0.03)+'" fill="'+c0+'"'+st+' transform="rotate('+(fp[0]*200)+' '+(cx+u*fp[0])+' '+(cy+u*fp[1])+')"/>';});
+    return B;
+  }
+  var bodyCol=o.shark?"#7d8a96":c0;
+  B+='<ellipse cx="'+cx+'" cy="'+cy+'" rx="'+(u*0.24)+'" ry="'+(u*0.115)+'" fill="'+bodyCol+'"'+st+op+'/>';
+  if(o.whale){B+='<polygon points="'+(cx-u*0.22)+','+cy+' '+(cx-u*0.36)+','+(cy-u*0.1)+' '+(cx-u*0.3)+','+cy+' '+(cx-u*0.36)+','+(cy+u*0.1)+'" fill="'+bodyCol+'"'+st+'/>';}
+  else if(o.dolphin){B+='<path d="M'+(cx+u*0.2)+','+cy+' Q'+(cx+u*0.34)+','+(cy-u*0.12)+' '+(cx+u*0.3)+','+(cy-u*0.02)+' Q'+(cx+u*0.3)+','+(cy+u*0.08)+' '+(cx+u*0.2)+','+(cy+u*0.05)+'" fill="'+bodyCol+'"'+st+'/>';}
+  else{B+='<polygon points="'+(cx+u*0.22)+','+cy+' '+(cx+u*0.36)+','+(cy-u*0.11)+' '+(cx+u*0.36)+','+(cy+u*0.11)+'" fill="'+bodyCol+'"'+st+'/>';}
+  B+='<polygon points="'+(cx-u*0.02)+','+(cy-u*0.1)+' '+(cx+u*0.04)+','+(cy-u*0.2)+' '+(cx+u*0.1)+','+(cy-u*0.09)+'" fill="'+(o.shark?"#5b6770":c1)+'"'+st+'/>';
+  if(o.shark){B+='<path d="M'+(cx-u*0.1)+','+(cy-u*0.06)+' L'+(cx-u*0.02)+','+(cy-u*0.02)+' L'+(cx-u*0.1)+','+(cy+u*0.02)+'" fill="none" stroke="'+cL+'" stroke-width="'+(u*0.01)+'"/>';}
+  B+='<circle cx="'+(cx-u*0.17)+'" cy="'+(cy-u*0.02)+'" r="'+(u*0.016)+'" fill="'+cL+'"/>';
+  for(var bb=0;bb<5;bb++)B+='<circle cx="'+r.n(w*0.1,w*0.9).toFixed(0)+'" cy="'+r.n(h*0.15,h*0.55).toFixed(0)+'" r="'+r.n(u*0.008,u*0.02).toFixed(0)+'" fill="none" stroke="'+cL+'" stroke-width="3" opacity="0.6"/>';
+  return B;
+}
+function drawSnake(r,w,h,pal,eff){
+  var u=Math.min(w,h),cx=w/2,cy=h/2,c0=pal[0],c1=pal[1%pal.length],cL=pal[pal.length-1];
+  var B='<path d="M'+(w*0.1)+','+(cy+u*0.15)+' Q'+(w*0.3)+','+(cy-u*0.15)+' '+(w*0.5)+','+(cy+u*0.1)+' Q'+(w*0.7)+','+(cy+u*0.28)+' '+(w*0.82)+','+(cy-u*0.05)+'" fill="none" stroke="'+c0+'" stroke-width="'+(u*0.06)+'" stroke-linecap="round"/>';
+  B+='<path d="M'+(w*0.1)+','+(cy+u*0.15)+' Q'+(w*0.3)+','+(cy-u*0.15)+' '+(w*0.5)+','+(cy+u*0.1)+'" fill="none" stroke="'+c1+'" stroke-width="'+(u*0.02)+'" stroke-linecap="round" stroke-dasharray="'+(u*0.04)+' '+(u*0.05)+'"/>';
+  B+='<circle cx="'+(w*0.84)+'" cy="'+(cy-u*0.05)+'" r="'+(u*0.06)+'" fill="'+c0+'"/>';
+  B+='<circle cx="'+(w*0.86)+'" cy="'+(cy-u*0.07)+'" r="'+(u*0.011)+'" fill="'+cL+'"/>';
+  B+='<path d="M'+(w*0.89)+','+(cy-u*0.03)+' L'+(w*0.95)+','+(cy-u*0.01)+' M'+(w*0.89)+','+(cy-u*0.03)+' L'+(w*0.95)+','+(cy-u*0.06)+'" stroke="'+c1+'" stroke-width="'+(u*0.008)+'" stroke-linecap="round"/>';
+  return B;
+}
+function drawFrog(r,w,h,pal,eff){
+  var u=Math.min(w,h),cx=w/2,cy=h/2,c0=pal[0],c1=pal[1%pal.length],cL=pal[pal.length-1];
+  var sw=eff.thick?u*0.014:(eff.thin?u*0.004:u*0.008);
+  var st=eff.stroke?' stroke="'+eff.stroke+'" stroke-width="'+sw.toFixed(1)+'" stroke-linejoin="round" stroke-linecap="round"':'';
+  var B='<ellipse cx="'+cx+'" cy="'+(cy+u*0.3)+'" rx="'+(u*0.3)+'" ry="'+(u*0.045)+'" fill="'+c0+'" opacity="0.25"/>';
+  B+='<ellipse cx="'+cx+'" cy="'+(cy+u*0.05)+'" rx="'+(u*0.2)+'" ry="'+(u*0.15)+'" fill="'+c0+'"'+st+'/>';
+  B+='<ellipse cx="'+cx+'" cy="'+(cy+u*0.09)+'" rx="'+(u*0.12)+'" ry="'+(u*0.08)+'" fill="'+cL+'" opacity="0.85"/>';
+  B+='<circle cx="'+(cx-u*0.09)+'" cy="'+(cy-u*0.12)+'" r="'+(u*0.06)+'" fill="'+c0+'"'+st+'/>';
+  B+='<circle cx="'+(cx+u*0.09)+'" cy="'+(cy-u*0.12)+'" r="'+(u*0.06)+'" fill="'+c0+'"'+st+'/>';
+  B+='<circle cx="'+(cx-u*0.09)+'" cy="'+(cy-u*0.12)+'" r="'+(u*0.026)+'" fill="'+cL+'"/><circle cx="'+(cx+u*0.09)+'" cy="'+(cy-u*0.12)+'" r="'+(u*0.026)+'" fill="'+cL+'"/>';
+  B+='<circle cx="'+(cx-u*0.09)+'" cy="'+(cy-u*0.12)+'" r="'+(u*0.012)+'" fill="#161616"/><circle cx="'+(cx+u*0.09)+'" cy="'+(cy-u*0.12)+'" r="'+(u*0.012)+'" fill="#161616"/>';
+  B+='<path d="M'+(cx-u*0.08)+','+(cy+u*0.06)+' Q'+cx+','+(cy+u*0.13)+' '+(cx+u*0.08)+','+(cy+u*0.06)+'" fill="none" stroke="#161616" stroke-width="'+(u*0.01)+'" stroke-linecap="round"/>';
+  return B;
+}
+function drawBee(r,w,h,pal,eff,o){
+  var u=Math.min(w,h),cx=w/2,cy=h/2,c0=pal[0],c1=pal[1%pal.length],cL=pal[pal.length-1];
+  var sw=eff.thick?u*0.014:(eff.thin?u*0.004:u*0.008);
+  var st=eff.stroke?' stroke="'+eff.stroke+'" stroke-width="'+sw.toFixed(1)+'" stroke-linejoin="round" stroke-linecap="round"':'';
+  var B='<ellipse cx="'+cx+'" cy="'+(cy+u*0.3)+'" rx="'+(u*0.3)+'" ry="'+(u*0.045)+'" fill="'+c0+'" opacity="0.25"/>';
+  if(o&&o.ant){
+    [[-0.1,0.05],[0,0],[0.1,-0.05]].forEach(function(pp){B+='<circle cx="'+(cx+u*pp[0])+'" cy="'+(cy+u*pp[1])+'" r="'+(u*0.07)+'" fill="'+c0+'"'+st+'/>';});
+    B+='<circle cx="'+(cx+u*0.17)+'" cy="'+(cy-u*0.06)+'" r="'+(u*0.045)+'" fill="'+c0+'"'+st+'/>';
+    B+='<circle cx="'+(cx+u*0.18)+'" cy="'+(cy-u*0.07)+'" r="'+(u*0.01)+'" fill="'+cL+'"/>';
+    B+='<path d="M'+(cx+u*0.15)+','+(cy-u*0.1)+' Q'+(cx+u*0.18)+','+(cy-u*0.2)+' '+(cx+u*0.22)+','+(cy-u*0.2)+'" fill="none" stroke="'+c0+'" stroke-width="'+(u*0.008)+'"/>';
+    return B;
+  }
+  B+='<ellipse cx="'+(cx-u*0.06)+'" cy="'+(cy-u*0.12)+'" rx="'+(u*0.09)+'" ry="'+(u*0.05)+'" fill="'+cL+'" opacity="0.75" transform="rotate(-32 '+(cx-u*0.06)+' '+(cy-u*0.12)+')"/>';
+  B+='<ellipse cx="'+(cx+u*0.06)+'" cy="'+(cy-u*0.12)+'" rx="'+(u*0.09)+'" ry="'+(u*0.05)+'" fill="'+cL+'" opacity="0.75" transform="rotate(32 '+(cx+u*0.06)+' '+(cy-u*0.12)+')"/>';
+  B+='<ellipse cx="'+cx+'" cy="'+cy+'" rx="'+(u*0.19)+'" ry="'+(u*0.12)+'" fill="#f2c230"'+st+'/>';
+  for(var sb=0;sb<3;sb++){var bx=cx-u*0.08+sb*u*0.08;B+='<path d="M'+bx+','+(cy-u*0.11)+' Q'+(bx+u*0.02)+','+cy+' '+bx+','+(cy+u*0.11)+'" fill="none" stroke="#161616" stroke-width="'+(u*0.022)+'"/>';}
+  B+='<circle cx="'+(cx+u*0.16)+'" cy="'+(cy-u*0.03)+'" r="'+(u*0.012)+'" fill="#161616"/>';
+  B+='<path d="M'+(cx+u*0.14)+','+(cy-u*0.1)+' Q'+(cx+u*0.16)+','+(cy-u*0.2)+' '+(cx+u*0.2)+','+(cy-u*0.2)+'" fill="none" stroke="#161616" stroke-width="'+(u*0.008)+'"/>';
+  return B;
+}
+function drawFood(r,w,h,pal,eff,kind){
+  var u=Math.min(w,h),cx=w/2,cy=h/2,c0=pal[0],c1=pal[1%pal.length],c2=pal[2%pal.length],cL=pal[pal.length-1];
+  var sw=eff.thick?u*0.014:(eff.thin?u*0.004:u*0.008);
+  var st=eff.stroke?' stroke="'+eff.stroke+'" stroke-width="'+sw.toFixed(1)+'" stroke-linejoin="round" stroke-linecap="round"':'';
+  var B='<ellipse cx="'+cx+'" cy="'+(cy+u*0.3)+'" rx="'+(u*0.28)+'" ry="'+(u*0.045)+'" fill="'+c0+'" opacity="0.25"/>';
+  if(kind==="apel"){
+    B+='<circle cx="'+cx+'" cy="'+(cy+u*0.02)+'" r="'+(u*0.17)+'" fill="'+c1+'"'+st+'/>';
+    B+='<path d="M'+cx+','+(cy-u*0.14)+' Q'+cx+','+(cy-u*0.24)+' '+(cx+u*0.03)+','+(cy-u*0.26)+'" fill="none" stroke="'+c0+'" stroke-width="'+(u*0.016)+'"/>';
+    B+='<ellipse cx="'+(cx+u*0.08)+'" cy="'+(cy-u*0.16)+'" rx="'+(u*0.06)+'" ry="'+(u*0.025)+'" fill="'+c0+'" transform="rotate(-30 '+(cx+u*0.08)+' '+(cy-u*0.16)+')"/>';
+    B+='<ellipse cx="'+(cx-u*0.06)+'" cy="'+(cy-u*0.05)+'" rx="'+(u*0.03)+'" ry="'+(u*0.05)+'" fill="'+cL+'" opacity="0.6" transform="rotate(20 '+(cx-u*0.06)+' '+(cy-u*0.05)+')"/>';
+  }else if(kind==="pisang"){
+    B+='<path d="M'+(cx-u*0.2)+','+(cy-u*0.18)+' Q'+(cx-u*0.05)+','+(cy+u*0.28)+' '+(cx+u*0.22)+','+(cy-u*0.12)+' Q'+(cx+u*0.05)+','+(cy+u*0.08)+' '+(cx-u*0.14)+','+(cy-u*0.08)+' Z" fill="#f2c230"'+st+'/>';
+    B+='<rect x="'+(cx-u*0.23)+'" y="'+(cy-u*0.22)+'" width="'+(u*0.05)+'" height="'+(u*0.07)+'" fill="'+c0+'" transform="rotate(-20 '+(cx-u*0.2)+' '+(cy-u*0.18)+')"/>';
+  }else if(kind==="jamur"){
+    B+='<path d="M'+(cx-u*0.2)+','+(cy-u*0.02)+' A'+(u*0.2)+' '+(u*0.2)+' 0 0 1 '+(cx+u*0.2)+','+(cy-u*0.02)+' Z" fill="'+c1+'"'+st+'/>';
+    B+='<circle cx="'+(cx-u*0.09)+'" cy="'+(cy-u*0.1)+'" r="'+(u*0.028)+'" fill="'+cL+'"/><circle cx="'+(cx+u*0.07)+'" cy="'+(cy-u*0.13)+'" r="'+(u*0.022)+'" fill="'+cL+'"/><circle cx="'+(cx+u*0.12)+'" cy="'+(cy-u*0.05)+'" r="'+(u*0.018)+'" fill="'+cL+'"/>';
+    B+='<rect x="'+(cx-u*0.06)+'" y="'+(cy-u*0.02)+'" width="'+(u*0.12)+'" height="'+(u*0.2)+'" fill="'+cL+'"'+st+'/>';
+  }else if(kind==="stroberi"){
+    B+='<path d="M'+cx+','+(cy+u*0.22)+' C'+(cx-u*0.17)+','+(cy-u*0.02)+' '+(cx-u*0.14)+','+(cy-u*0.18)+' '+cx+','+(cy-u*0.1)+' C'+(cx+u*0.14)+','+(cy-u*0.18)+' '+(cx+u*0.17)+','+(cy-u*0.02)+' '+cx+','+(cy+u*0.22)+' Z" fill="'+c1+'"'+st+'/>';
+    [[-0.07,-0.05],[0.06,-0.02],[-0.02,0.06],[0.09,0.07],[-0.09,0.1]].forEach(function(sp){B+='<ellipse cx="'+(cx+u*sp[0])+'" cy="'+(cy+u*sp[1])+'" rx="'+(u*0.012)+'" ry="'+(u*0.02)+'" fill="'+cL+'"/>';});
+    B+='<polygon points="'+cx+','+(cy-u*0.1)+' '+(cx-u*0.09)+','+(cy-u*0.2)+' '+(cx-u*0.02)+','+(cy-u*0.14)+' '+(cx+u*0.05)+','+(cy-u*0.21)+' '+(cx+u*0.1)+','+(cy-u*0.12)+'" fill="'+c0+'"/>';
+  }
+  return B;
+}
+function drawVehicle(r,w,h,pal,eff,kind){
+  var u=Math.min(w,h),cx=w/2,cy=h/2,c0=pal[0],c1=pal[1%pal.length],c2=pal[2%pal.length],cL=pal[pal.length-1];
+  var sw=eff.thick?u*0.014:(eff.thin?u*0.004:u*0.008);
+  var st=eff.stroke?' stroke="'+eff.stroke+'" stroke-width="'+sw.toFixed(1)+'" stroke-linejoin="round" stroke-linecap="round"':'';
+  var B="";
+  if(kind==="sepeda"){
+    B+='<ellipse cx="'+cx+'" cy="'+(cy+u*0.28)+'" rx="'+(u*0.34)+'" ry="'+(u*0.04)+'" fill="'+c0+'" opacity="0.2"/>';
+    B+='<circle cx="'+(cx-u*0.2)+'" cy="'+(cy+u*0.14)+'" r="'+(u*0.11)+'" fill="none" stroke="'+(eff.stroke||"#161616")+'" stroke-width="'+(u*0.014)+'"/>';
+    B+='<circle cx="'+(cx+u*0.2)+'" cy="'+(cy+u*0.14)+'" r="'+(u*0.11)+'" fill="none" stroke="'+(eff.stroke||"#161616")+'" stroke-width="'+(u*0.014)+'"/>';
+    B+='<path d="M'+(cx-u*0.2)+','+(cy+u*0.14)+' L'+(cx-u*0.02)+','+(cy-u*0.02)+' L'+(cx+u*0.2)+','+(cy+u*0.14)+' M'+(cx-u*0.02)+','+(cy-u*0.02)+' L'+(cx+u*0.08)+','+(cy-u*0.02)+' M'+(cx-u*0.02)+','+(cy-u*0.02)+' L'+(cx-u*0.08)+','+(cy-u*0.12)+' M'+(cx+u*0.08)+','+(cy-u*0.02)+' L'+(cx+u*0.14)+','+(cy-u*0.14)+'" fill="none" stroke="'+c0+'" stroke-width="'+(u*0.016)+'" stroke-linecap="round"/>';
+    B+='<circle cx="'+(cx-u*0.02)+'" cy="'+(cy-u*0.02)+'" r="'+(u*0.02)+'" fill="'+c1+'"/>';
+  }else if(kind==="kapal"){
+    B+='<path d="M'+(cx-u*0.26)+','+(cy+u*0.02)+' L'+(cx+u*0.26)+','+(cy+u*0.02)+' L'+(cx+u*0.18)+','+(cy+u*0.16)+' L'+(cx-u*0.18)+','+(cy+u*0.16)+' Z" fill="'+c0+'"'+st+'/>';
+    B+='<path d="M'+cx+','+(cy+u*0.02)+' L'+cx+','+(cy-u*0.26)+'" stroke="'+(eff.stroke||c0)+'" stroke-width="'+(u*0.014)+'"/>';
+    B+='<polygon points="'+cx+','+(cy-u*0.26)+' '+(cx+u*0.16)+','+(cy-u*0.06)+' '+cx+','+(cy-u*0.02)+'" fill="'+c1+'"'+st+'/>';
+    B+='<polygon points="'+cx+','+(cy-u*0.24)+' '+(cx-u*0.11)+','+(cy-u*0.08)+' '+cx+','+(cy-u*0.04)+'" fill="'+c2+'"'+st+'/>';
+    B+='<path d="'+wavePath(r,w,cy+u*0.24,u*0.02,w*0.3)+'" fill="none" stroke="'+c2+'" stroke-width="'+(u*0.012)+'" opacity="0.7"/>';
+  }else if(kind==="kereta"){
+    B+='<rect x="'+(cx-u*0.26)+'" y="'+(cy-u*0.18)+'" width="'+(u*0.52)+'" height="'+(u*0.3)+'" rx="'+(u*0.04)+'" fill="'+c0+'"'+st+'/>';
+    B+='<rect x="'+(cx-u*0.2)+'" y="'+(cy-u*0.12)+'" width="'+(u*0.11)+'" height="'+(u*0.09)+'" rx="'+(u*0.02)+'" fill="'+c2+'"/>';
+    B+='<rect x="'+(cx-u*0.03)+'" y="'+(cy-u*0.12)+'" width="'+(u*0.11)+'" height="'+(u*0.09)+'" rx="'+(u*0.02)+'" fill="'+c2+'"/>';
+    B+='<rect x="'+(cx+u*0.14)+'" y="'+(cy-u*0.12)+'" width="'+(u*0.08)+'" height="'+(u*0.09)+'" rx="'+(u*0.02)+'" fill="'+cL+'"/>';
+    B+='<rect x="'+(cx+u*0.16)+'" y="'+(cy-u*0.3)+'" width="'+(u*0.06)+'" height="'+(u*0.13)+'" fill="'+c1+'"'+st+'/>';
+    B+='<circle cx="'+(cx-u*0.16)+'" cy="'+(cy+u*0.16)+'" r="'+(u*0.045)+'" fill="#161616"/><circle cx="'+(cx+u*0.02)+'" cy="'+(cy+u*0.16)+'" r="'+(u*0.045)+'" fill="#161616"/><circle cx="'+(cx+u*0.16)+'" cy="'+(cy+u*0.16)+'" r="'+(u*0.045)+'" fill="#161616"/>';
+    B+='<path d="M'+(w*0.05)+','+(cy+u*0.24)+' L'+(w*0.95)+','+(cy+u*0.24)+'" stroke="'+(eff.stroke||c0)+'" stroke-width="'+(u*0.012)+'"/>';
+  }
+  return B;
+}
+function drawObject(r,w,h,pal,eff,kind){
+  var u=Math.min(w,h),cx=w/2,cy=h/2,c0=pal[0],c1=pal[1%pal.length],c2=pal[2%pal.length],cL=pal[pal.length-1];
+  var sw=eff.thick?u*0.014:(eff.thin?u*0.004:u*0.008);
+  var st=eff.stroke?' stroke="'+eff.stroke+'" stroke-width="'+sw.toFixed(1)+'" stroke-linejoin="round" stroke-linecap="round"':'';
+  var B="";
+  if(kind==="gitar"){
+    B+='<circle cx="'+(cx-u*0.06)+'" cy="'+(cy+u*0.08)+'" r="'+(u*0.13)+'" fill="'+c0+'"'+st+'/>';
+    B+='<circle cx="'+(cx+u*0.06)+'" cy="'+(cy-u*0.02)+'" r="'+(u*0.09)+'" fill="'+c0+'"'+st+'/>';
+    B+='<circle cx="'+(cx-u*0.02)+'" cy="'+(cy+u*0.06)+'" r="'+(u*0.045)+'" fill="'+cL+'"'+st+'/>';
+    B+='<rect x="'+(cx+u*0.08)+'" y="'+(cy-u*0.28)+'" width="'+(u*0.05)+'" height="'+(u*0.3)+'" fill="'+c1+'"'+st+' transform="rotate(24 '+(cx+u*0.1)+' '+(cy-u*0.13)+')"/>';
+    B+='<rect x="'+(cx+u*0.16)+'" y="'+(cy-u*0.32)+'" width="'+(u*0.07)+'" height="'+(u*0.05)+'" fill="'+c2+'" transform="rotate(24 '+(cx+u*0.18)+' '+(cy-u*0.3)+')"/>';
+  }else if(kind==="buku"){
+    B+='<rect x="'+(cx-u*0.2)+'" y="'+(cy-u*0.16)+'" width="'+(u*0.4)+'" height="'+(u*0.32)+'" rx="'+(u*0.02)+'" fill="'+c0+'"'+st+'/>';
+    B+='<rect x="'+(cx-u*0.16)+'" y="'+(cy-u*0.12)+'" width="'+(u*0.32)+'" height="'+(u*0.24)+'" fill="'+cL+'"/>';
+    B+='<path d="M'+cx+','+(cy-u*0.12)+' L'+cx+','+(cy+u*0.12)+'" stroke="'+c1+'" stroke-width="'+(u*0.012)+'"/>';
+    for(var bl=0;bl<3;bl++){B+='<path d="M'+(cx-u*0.12)+','+(cy-u*0.06+bl*u*0.06)+' L'+(cx-u*0.03)+','+(cy-u*0.06+bl*u*0.06)+'" stroke="'+c2+'" stroke-width="'+(u*0.008)+'"/>';}
+  }else if(kind==="payung"){
+    B+='<path d="M'+(cx-u*0.24)+','+(cy-u*0.02)+' A'+(u*0.24)+' '+(u*0.24)+' 0 0 1 '+(cx+u*0.24)+','+(cy-u*0.02)+' Z" fill="'+c1+'"'+st+'/>';
+    B+='<path d="M'+(cx-u*0.12)+','+(cy-u*0.02)+' A'+(u*0.12)+' '+(u*0.12)+' 0 0 1 '+(cx+u*0.12)+','+(cy-u*0.02)+'" fill="'+c0+'" opacity="0.5"/>';
+    B+='<path d="M'+cx+','+(cy-u*0.02)+' L'+cx+','+(cy+u*0.2)+'" stroke="'+(eff.stroke||c0)+'" stroke-width="'+(u*0.012)+'"/>';
+    B+='<path d="M'+cx+','+(cy+u*0.2)+' Q'+cx+','+(cy+u*0.28)+' '+(cx-u*0.05)+','+(cy+u*0.26)+'" fill="none" stroke="'+(eff.stroke||c0)+'" stroke-width="'+(u*0.012)+'" stroke-linecap="round"/>';
+    B+='<circle cx="'+cx+'" cy="'+(cy-u*0.26)+'" r="'+(u*0.015)+'" fill="'+c2+'"/>';
+  }else if(kind==="kamera"){
+    B+='<rect x="'+(cx-u*0.22)+'" y="'+(cy-u*0.13)+'" width="'+(u*0.44)+'" height="'+(u*0.26)+'" rx="'+(u*0.03)+'" fill="'+c0+'"'+st+'/>';
+    B+='<rect x="'+(cx-u*0.08)+'" y="'+(cy-u*0.18)+'" width="'+(u*0.16)+'" height="'+(u*0.06)+'" rx="'+(u*0.015)+'" fill="'+c1+'"'+st+'/>';
+    B+='<circle cx="'+cx+'" cy="'+cy+'" r="'+(u*0.09)+'" fill="'+c2+'"'+st+'/>';
+    B+='<circle cx="'+cx+'" cy="'+cy+'" r="'+(u*0.05)+'" fill="'+cL+'"/>';
+    B+='<circle cx="'+(cx-u*0.02)+'" cy="'+(cy-u*0.02)+'" r="'+(u*0.015)+'" fill="'+c2+'"/>';
+    B+='<circle cx="'+(cx+u*0.16)+'" cy="'+(cy-u*0.08)+'" r="'+(u*0.018)+'" fill="'+c1+'"/>';
+  }else if(kind==="mahkota"){
+    B+='<polygon points="'+(cx-u*0.2)+','+(cy+u*0.14)+' '+(cx-u*0.22)+','+(cy-u*0.1)+' '+(cx-u*0.1)+','+(cy-u*0.02)+' '+cx+','+(cy-u*0.18)+' '+(cx+u*0.1)+','+(cy-u*0.02)+' '+(cx+u*0.22)+','+(cy-u*0.1)+' '+(cx+u*0.2)+','+(cy+u*0.14)+'" fill="'+c1+'"'+st+'/>';
+    B+='<circle cx="'+cx+'" cy="'+(cy+u*0.04)+'" r="'+(u*0.025)+'" fill="'+c2+'"/><circle cx="'+(cx-u*0.12)+'" cy="'+(cy+u*0.04)+'" r="'+(u*0.018)+'" fill="'+c2+'"/><circle cx="'+(cx+u*0.12)+'" cy="'+(cy+u*0.04)+'" r="'+(u*0.018)+'" fill="'+c2+'"/>';
+    B+='<circle cx="'+cx+'" cy="'+(cy-u*0.18)+'" r="'+(u*0.018)+'" fill="'+cL+'"/>';
+  }else if(kind==="robot"){
+    B+='<rect x="'+(cx-u*0.11)+'" y="'+(cy-u*0.24)+'" width="'+(u*0.22)+'" height="'+(u*0.18)+'" rx="'+(u*0.03)+'" fill="'+c0+'"'+st+'/>';
+    B+='<path d="M'+cx+','+(cy-u*0.24)+' L'+cx+','+(cy-u*0.32)+'" stroke="'+(eff.stroke||c0)+'" stroke-width="'+(u*0.012)+'"/>';
+    B+='<circle cx="'+cx+'" cy="'+(cy-u*0.33)+'" r="'+(u*0.018)+'" fill="'+c1+'"/>';
+    B+='<circle cx="'+(cx-u*0.05)+'" cy="'+(cy-u*0.15)+'" r="'+(u*0.02)+'" fill="'+c2+'"/><circle cx="'+(cx+u*0.05)+'" cy="'+(cy-u*0.15)+'" r="'+(u*0.02)+'" fill="'+c2+'"/>';
+    B+='<rect x="'+(cx-u*0.07)+'" y="'+(cy-u*0.1)+'" width="'+(u*0.14)+'" height="'+(u*0.02)+'" fill="'+cL+'"/>';
+    B+='<rect x="'+(cx-u*0.16)+'" y="'+(cy-u*0.04)+'" width="'+(u*0.32)+'" height="'+(u*0.22)+'" rx="'+(u*0.03)+'" fill="'+c1+'"'+st+'/>';
+    B+='<circle cx="'+(cx-u*0.06)+'" cy="'+(cy+u*0.04)+'" r="'+(u*0.02)+'" fill="'+c2+'"/><circle cx="'+(cx+u*0.06)+'" cy="'+(cy+u*0.04)+'" r="'+(u*0.02)+'" fill="'+cL+'"/>';
+    B+='<path d="M'+(cx-u*0.16)+','+(cy-u*0.02)+' L'+(cx-u*0.24)+','+(cy+u*0.1)+' M'+(cx+u*0.16)+','+(cy-u*0.02)+' L'+(cx+u*0.24)+','+(cy+u*0.1)+'" stroke="'+c0+'" stroke-width="'+(u*0.02)+'" stroke-linecap="round"/>';
+  }else if(kind==="hantu"){
+    B+='<path d="M'+(cx-u*0.15)+','+(cy+u*0.18)+' L'+(cx-u*0.15)+','+(cy-u*0.08)+' A'+(u*0.15)+' '+(u*0.15)+' 0 0 1 '+(cx+u*0.15)+','+(cy-u*0.08)+' L'+(cx+u*0.15)+','+(cy+u*0.18)+' L'+(cx+u*0.075)+','+(cy+u*0.1)+' L'+cx+','+(cy+u*0.18)+' L'+(cx-u*0.075)+','+(cy+u*0.1)+' Z" fill="'+cL+'"'+st+'/>';
+    B+='<circle cx="'+(cx-u*0.05)+'" cy="'+(cy-u*0.02)+'" r="'+(u*0.02)+'" fill="#161616"/><circle cx="'+(cx+u*0.05)+'" cy="'+(cy-u*0.02)+'" r="'+(u*0.02)+'" fill="#161616"/>';
+    B+='<ellipse cx="'+cx+'" cy="'+(cy+u*0.06)+'" rx="'+(u*0.02)+'" ry="'+(u*0.03)+'" fill="#161616"/>';
+  }
+  return B;
+}
+function drawNature(r,w,h,pal,eff,kind){
+  var u=Math.min(w,h),cx=w/2,cy=h/2,c0=pal[0],c1=pal[1%pal.length],c2=pal[2%pal.length],cL=pal[pal.length-1];
+  var sw=eff.thick?u*0.014:(eff.thin?u*0.004:u*0.008);
+  var st=eff.stroke?' stroke="'+eff.stroke+'" stroke-width="'+sw.toFixed(1)+'" stroke-linejoin="round" stroke-linecap="round"':'';
+  var B="";
+  if(kind==="api"){
+    B+='<path d="M'+cx+','+(cy-u*0.26)+' C'+(cx+u*0.14)+','+(cy-u*0.08)+' '+(cx+u*0.16)+','+(cy+u*0.08)+' '+(cx+u*0.1)+','+(cy+u*0.16)+' C'+(cx+u*0.04)+','+(cy+u*0.22)+' '+(cx-u*0.1)+','+(cy+u*0.2)+' '+(cx-u*0.13)+','+(cy+u*0.1)+' C'+(cx-u*0.16)+','+(cy)+' '+(cx-u*0.1)+','+(cy-u*0.12)+' '+cx+','+(cy-u*0.26)+' Z" fill="'+c1+'"'+st+'/>';
+    B+='<path d="M'+cx+','+(cy-u*0.1)+' C'+(cx+u*0.07)+','+(cy)+' '+(cx+u*0.08)+','+(cy+u*0.08)+' '+(cx+u*0.03)+','+(cy+u*0.13)+' C'+(cx-u*0.02)+','+(cy+u*0.16)+' '+(cx-u*0.08)+','+(cy+u*0.1)+' '+(cx-u*0.06)+','+(cy+u*0.02)+' C'+(cx-u*0.04)+','+(cy-u*0.04)+' '+(cx-u*0.02)+','+(cy-u*0.06)+' '+cx+','+(cy-u*0.1)+' Z" fill="'+c2+'"/>';
+  }else if(kind==="daun"){
+    B+='<path d="M'+cx+','+(cy-u*0.24)+' C'+(cx+u*0.18)+','+(cy-u*0.1)+' '+(cx+u*0.16)+','+(cy+u*0.14)+' '+cx+','+(cy+u*0.24)+' C'+(cx-u*0.16)+','+(cy+u*0.12)+' '+(cx-u*0.18)+','+(cy-u*0.12)+' '+cx+','+(cy-u*0.24)+' Z" fill="'+c0+'"'+st+'/>';
+    B+='<path d="M'+cx+','+(cy-u*0.2)+' L'+cx+','+(cy+u*0.22)+'" stroke="'+cL+'" stroke-width="'+(u*0.01)+'"/>';
+    B+='<path d="M'+cx+','+(cy+u*0.26)+' Q'+cx+','+(cy+u*0.3)+' '+(cx+u*0.03)+','+(cy+u*0.3)+'" fill="none" stroke="'+c0+'" stroke-width="'+(u*0.012)+'"/>';
+  }else if(kind==="pelangi"){
+    var cols=[c0,c1,c2,pal[3%pal.length]];
+    for(var pr=0;pr<4;pr++){var rr=u*(0.26-pr*0.045);B+='<path d="M'+(cx-rr)+','+(cy+u*0.1)+' A'+rr+' '+rr+' 0 0 1 '+(cx+rr)+','+(cy+u*0.1)+'" fill="none" stroke="'+cols[pr]+'" stroke-width="'+(u*0.04)+'" stroke-linecap="round"/>';}
+    B+='<ellipse cx="'+(cx-u*0.26)+'" cy="'+(cy+u*0.12)+'" rx="'+(u*0.07)+'" ry="'+(u*0.03)+'" fill="'+cL+'"/><ellipse cx="'+(cx+u*0.26)+'" cy="'+(cy+u*0.12)+'" rx="'+(u*0.07)+'" ry="'+(u*0.03)+'" fill="'+cL+'"/>';
+  }else if(kind==="bintanglaut"){
+    B+='<polygon points="'+star8(cx,cy,u*0.24,u*0.1,0.3)+'" fill="'+c1+'"'+st+'/>';
+    B+='<polygon points="'+star8(cx,cy,u*0.12,u*0.05,0.3)+'" fill="'+c2+'"/>';
+    B+='<circle cx="'+cx+'" cy="'+cy+'" r="'+(u*0.02)+'" fill="'+cL+'"/>';
+  }
+  return B;
+}
+
 /* ---------- Prompt scene drawing ---------- */
-function drawSubject(subj,r,w,h,pal,eff){
+function drawSubject(subj,r,w,h,pal,eff,label){
   var u=Math.min(w,h),cx=w/2,cy=h/2;
   var c0=pal[0],c1=pal[1%pal.length],c2=pal[2%pal.length],c3=pal[3%pal.length],cLast=pal[pal.length-1];
   var sw=eff.thick?u*0.014:(eff.thin?u*0.004:u*0.008);
@@ -1085,10 +1408,65 @@ function drawSubject(subj,r,w,h,pal,eff){
       var tx=w*t2[0],ty=h*t2[1],ts=t2[2],tc=ti%2?c0:c1;
       B+='<g transform="translate('+tx.toFixed(0)+' '+ty.toFixed(0)+') scale('+ts+')"><rect x="-6" y="-34" width="12" height="36" fill="'+c0+'"/><polygon points="0,-120 -34,-52 34,-52" fill="'+tc+'"'+st+'/><polygon points="0,-92 -30,-34 30,-34" fill="'+tc+'"'+st+'/></g>';});
     break;
+   case "singa": B=backdrop()+drawQuad(r,w,h,pal,eff,{mane:true,maneCol:"#b06f2a",body:"#d99a4e"}); break;
+   case "harimau": B=backdrop()+drawQuad(r,w,h,pal,eff,{stripes:true,body:"#e07b39",stripeCol:"#161616"}); break;
+   case "zebra": B=backdrop()+drawQuad(r,w,h,pal,eff,{stripes:true,body:"#f5f2ea",stripeCol:"#161616"}); break;
+   case "kuda": B=backdrop()+drawQuad(r,w,h,pal,eff,{longLegs:true,mane:true,maneCol:"#5b3a1e",body:"#8a5a33"}); break;
+   case "rusa": B=backdrop()+drawQuad(r,w,h,pal,eff,{antlers:true,body:"#b07a45"}); break;
+   case "sapi": B=backdrop()+drawQuad(r,w,h,pal,eff,{spots:true,horns:true,body:"#f5f2ea",stripeCol:"#161616"}); break;
+   case "beruang": B=backdrop()+drawQuad(r,w,h,pal,eff,{earRound:true,body:"#7a5230"}); break;
+   case "rubah": B=backdrop()+drawQuad(r,w,h,pal,eff,{bigTail:true,body:"#d96c2e"}); break;
+   case "serigala": B=backdrop()+drawQuad(r,w,h,pal,eff,{body:"#8a8a8a"}); break;
+   case "kelinci": B=backdrop()+drawQuad(r,w,h,pal,eff,{longEars:true,body:"#e8e8e8"}); break;
+   case "panda": B=backdrop()+drawQuad(r,w,h,pal,eff,{patches:true,earRound:true,body:"#f7f3ea"}); break;
+   case "monyet": B=backdrop()+drawQuad(r,w,h,pal,eff,{bigTail:true,earRound:true,body:"#9a6b4f"}); break;
+   case "babi": B=backdrop()+drawQuad(r,w,h,pal,eff,{snout:true,body:"#f2a0a0"}); break;
+   case "domba": B=backdrop()+drawQuad(r,w,h,pal,eff,{wool:true,earRound:true,body:"#f5f2ea"}); break;
+   case "landak": B=backdrop()+drawQuad(r,w,h,pal,eff,{spikes:true,body:"#8a6b4f"}); break;
+   case "tupai": B=backdrop()+drawQuad(r,w,h,pal,eff,{bigTail:true,body:"#c07a3e"}); break;
+   case "ayam": B=backdrop()+drawBird2(r,w,h,pal,eff,{comb:true}); break;
+   case "bebek": B=backdrop()+drawBird2(r,w,h,pal,eff,{flatBeak:true}); break;
+   case "penguin": B=backdrop()+drawBird2(r,w,h,pal,eff,{tuxedo:true}); break;
+   case "burunghantu": B=backdrop()+drawBird2(r,w,h,pal,eff,{owl:true}); break;
+   case "hiu": B=drawSea(r,w,h,pal,eff,{shark:true}); break;
+   case "paus": B=drawSea(r,w,h,pal,eff,{whale:true}); break;
+   case "lumba": B=drawSea(r,w,h,pal,eff,{dolphin:true}); break;
+   case "penyu": B=drawSea(r,w,h,pal,eff,{turtle:true}); break;
+   case "ubur": B=drawSea(r,w,h,pal,eff,{jelly:true}); break;
+   case "gurita": B=drawSea(r,w,h,pal,eff,{octo:true}); break;
+   case "ular": B=backdrop()+drawSnake(r,w,h,pal,eff); break;
+   case "katak": B=backdrop()+drawFrog(r,w,h,pal,eff); break;
+   case "lebah": B=backdrop()+drawBee(r,w,h,pal,eff,{}); break;
+   case "semut": B=backdrop()+drawBee(r,w,h,pal,eff,{ant:true}); break;
+   case "apel": B=backdrop()+drawFood(r,w,h,pal,eff,"apel"); break;
+   case "pisang": B=backdrop()+drawFood(r,w,h,pal,eff,"pisang"); break;
+   case "jamur": B=backdrop()+drawFood(r,w,h,pal,eff,"jamur"); break;
+   case "stroberi": B=backdrop()+drawFood(r,w,h,pal,eff,"stroberi"); break;
+   case "sepeda": B=backdrop()+drawVehicle(r,w,h,pal,eff,"sepeda"); break;
+   case "kapal": B=backdrop()+drawVehicle(r,w,h,pal,eff,"kapal"); break;
+   case "kereta": B=backdrop()+drawVehicle(r,w,h,pal,eff,"kereta"); break;
+   case "gitar": B=backdrop()+drawObject(r,w,h,pal,eff,"gitar"); break;
+   case "buku": B=backdrop()+drawObject(r,w,h,pal,eff,"buku"); break;
+   case "payung": B=backdrop()+drawObject(r,w,h,pal,eff,"payung"); break;
+   case "kamera": B=backdrop()+drawObject(r,w,h,pal,eff,"kamera"); break;
+   case "mahkota": B=backdrop()+drawObject(r,w,h,pal,eff,"mahkota"); break;
+   case "robot": B=backdrop()+drawObject(r,w,h,pal,eff,"robot"); break;
+   case "hantu": B=backdrop()+drawObject(r,w,h,pal,eff,"hantu"); break;
+   case "api": B=backdrop()+drawNature(r,w,h,pal,eff,"api"); break;
+   case "daun": B=backdrop()+drawNature(r,w,h,pal,eff,"daun"); break;
+   case "pelangi": B=backdrop()+drawNature(r,w,h,pal,eff,"pelangi"); break;
+   case "bintanglaut": B=backdrop()+drawNature(r,w,h,pal,eff,"bintanglaut"); break;
    default:
     B=backdrop();
     for(var ab=0;ab<6;ab++)B+='<path d="'+blobPath(r,r.n(w*0.2,w*0.8),r.n(h*0.25,h*0.75),r.n(u*0.07,u*0.16),0.35)+'" fill="'+r.pick(pal)+'"'+st+' opacity="'+(eff.soft?0.6:0.9)+'"/>';
-    B+='<circle cx="'+cx+'" cy="'+cy+'" r="'+(u*0.1)+'" fill="'+c1+'"'+st+'/>';
+    if(label){
+      var L=String(label).trim().charAt(0).toUpperCase();
+      B+='<circle cx="'+cx+'" cy="'+cy+'" r="'+(u*0.24)+'" fill="'+c1+'"'+st+'/>'
+        +'<circle cx="'+cx+'" cy="'+cy+'" r="'+(u*0.2)+'" fill="none" stroke="'+cLast+'" stroke-width="'+Math.max(3,u*0.01)+'" stroke-dasharray="'+(u*0.03)+' '+(u*0.02)+'"/>'
+        +'<text x="'+cx+'" y="'+(cy+u*0.09)+'" font-family="Arial, sans-serif" font-size="'+(u*0.26)+'" font-weight="bold" fill="'+cLast+'" text-anchor="middle">'+esc(L)+'</text>';
+    }else{
+      B+='<circle cx="'+cx+'" cy="'+cy+'" r="'+(u*0.1)+'" fill="'+c1+'"'+st+'/>';
+    }
   }
   return B;
 }
@@ -1096,7 +1474,7 @@ function cloneEff(eff){var o={};for(var k in eff)o[k]=eff[k];return o;}
 function genPromptSVG(r,w,h,pal,uid,eff,subjId,spec,seed){
   var eff2=(spec&&spec.comp==="minimal")?cloneEff(eff):eff;
   if(eff2!==eff)eff2.minimal=true;
-  var body=drawSubject(subjId,r,w,h,pal,eff2);
+  var body=drawSubject(subjId,r,w,h,pal,eff2,spec?spec.raw:"");
   var u=Math.min(w,h),cx=w/2,cy=h/2;
   if(spec){
     var sc=spec.poseScale||1;
@@ -1107,10 +1485,10 @@ function genPromptSVG(r,w,h,pal,uid,eff,subjId,spec,seed){
     if(spec.action==="berlari"||spec.action==="terbang"){var ml="";for(var m=0;m<3;m++)ml+='<path d="M'+(w*0.08)+' '+(cy-u*0.14+m*u*0.07)+' L'+(w*0.3)+' '+(cy-u*0.14+m*u*0.07)+'" stroke="'+pal[pal.length-1]+'" stroke-width="4" opacity="0.5" stroke-linecap="round"/>';body=ml+body;}
     if(spec.count>=2){
       var r2=new RNG((seed||1)+77);
-      var mini=drawSubject(subjId,r2,w,h,pal,eff2);
+      var mini=drawSubject(subjId,r2,w,h,pal,eff2,spec?spec.raw:"");
       var mx=cx+u*0.42,my=cy+u*0.30;
       body+='<g transform="translate('+mx.toFixed(0)+' '+my.toFixed(0)+') scale(0.42) translate('+(-cx)+' '+(-cy)+')">'+mini+'</g>';
-      if(spec.count>=3){var r3=new RNG((seed||1)+177);var mini2=drawSubject(subjId,r3,w,h,pal,eff2);var mx2=cx-u*0.44,my2=cy+u*0.32;body+='<g transform="translate('+mx2.toFixed(0)+' '+my2.toFixed(0)+') scale(0.38) translate('+(-cx)+' '+(-cy)+')">'+mini2+'</g>';}
+      if(spec.count>=3){var r3=new RNG((seed||1)+177);var mini2=drawSubject(subjId,r3,w,h,pal,eff2,spec?spec.raw:"");var mx2=cx-u*0.44,my2=cy+u*0.32;body+='<g transform="translate('+mx2.toFixed(0)+' '+my2.toFixed(0)+') scale(0.38) translate('+(-cx)+' '+(-cy)+')">'+mini2+'</g>';}
     }
     body+=settingOverlay(spec,r,w,h,pal)+timeOverlay(spec,r,w,h,pal);
   }
@@ -1183,7 +1561,7 @@ function updateBatchPreview(){
 $("batchName").addEventListener("input",updateBatchPreview);updateBatchPreview();
 $("promptList").addEventListener("input",function(){updateTotal();renderSpecAnalysis();});
 $("exPrompt").addEventListener("click",function(){
-  $("promptList").value="Satu kucing oren duduk tenang di bawah pohon sakura saat pagi, gaya flat modern, komposisi tengah, latar transparan\nIkan koi berenang di kolam tenang saat senja, gaya ukiyo-e, komposisi tengah\nOmbak besar di laut lepas saat siang, gaya flat modern, komposisi penuh\nGunung dan matahari terbit di pagi hari, suasana tenang, komposisi simetris\nSecangkir kopi hangat di kafe saat pagi, gaya minimalis, komposisi close-up\nKupu-kupu terbang di taman bunga saat siang, suasana ceria, komposisi tengah\nKota kecil di malam berbintang, gaya neon, komposisi penuh\nRoket meluncur ke luar angkasa saat malam, gaya flat modern, komposisi tengah";
+  $("promptList").value="Satu kucing oren duduk tenang di bawah pohon sakura saat pagi, gaya flat modern, komposisi tengah, latar transparan\nIkan koi berenang di kolam tenang saat senja, gaya ukiyo-e, komposisi tengah\nOmbak besar di laut lepas saat siang, gaya flat modern, komposisi penuh\nGunung dan matahari terbit di pagi hari, suasana tenang, komposisi simetris\nSecangkir kopi hangat di kafe saat pagi, gaya minimalis, komposisi close-up\nKupu-kupu terbang di taman bunga saat siang, suasana ceria, komposisi tengah\nKota kecil di malam berbintang, gaya neon, komposisi penuh\nSinga jantan di padang savana saat senja, gaya flat modern, komposisi tengah\nPanda makan bambu di hutan saat pagi, suasana tenang, komposisi close-up\nRoket meluncur ke luar angkasa saat malam, gaya flat modern, komposisi tengah";
   updateTotal();renderSpecAnalysis();
 });
 var styleGrid=$("styleGrid");
