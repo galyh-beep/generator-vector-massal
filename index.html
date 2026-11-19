@@ -115,6 +115,15 @@ textarea:focus,input[type=text]:focus{outline:2px solid var(--accent);outline-of
 .sublabel{display:block;font-weight:800;font-size:12.5px;margin:14px 0 6px}
 .promptline{font-size:12.5px;color:var(--muted);line-height:1.45;margin-top:5px;font-style:italic}
 
+.specbox{margin-top:10px;background:var(--surface2);border:1.5px dashed var(--accent);border-radius:12px;padding:11px 12px}
+.specbox .hint{margin:6px 0}
+.specline{font-size:12.5px;line-height:1.6;margin:7px 0;padding:8px 9px;background:var(--surface);border:1px solid var(--line);border-radius:9px}
+.specline b{font-size:12.5px}
+.specchip{display:inline-block;font-size:11.5px;font-weight:800;border-radius:20px;padding:3px 8px;margin:2px 2px 2px 0;background:#e3f2e9;color:#14532d;border:1px solid #b7dfc4}
+@media(prefers-color-scheme:dark){.specchip{background:#123324;color:#b7e4c7;border-color:#1f4d33}}
+.specchip.miss{background:transparent;color:var(--muted);border:1px dashed var(--line)}
+.specscore{font-weight:800;color:var(--accent)}
+.specout{white-space:pre-line;font-size:13px;line-height:1.6;background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:10px 11px;margin-top:8px}
 .installbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:var(--ink);color:var(--bg);border-radius:var(--radius);padding:14px 16px;margin-bottom:18px}
 .installbar b{font-size:15px}
 .installbar p{margin:2px 0 0;font-size:13px;opacity:.85;line-height:1.45;max-width:640px}
@@ -157,7 +166,7 @@ textarea:focus,input[type=text]:focus{outline:2px solid var(--accent);outline-of
 <div class="wrap">
   <header class="top">
     <h1>Generator Vector Massal<br>untuk Stock</h1>
-    <p class="lede">Halo Ardian — buat <strong>puluhan sampai ratusan vector SVG</strong> sekaligus untuk microstock. Sekarang bisa <strong>berdasarkan daftar prompt kamu sendiri</strong> (satu baris = satu desain), dengan <strong>nama batch kustom</strong>, pilihan <strong>gaya vector bawaan</strong>, dan <strong>gaya versi kamu sendiri</strong> — misalnya “ukiyo-e, tinta hitam dan merah” — yang jadi prioritas. Kini bisa <strong>diinstal sebagai aplikasi</strong> di Android &amp; laptop, lengkap dengan <strong>preset &amp; riwayat</strong>, <strong>SEO stock otomatis</strong> (Adobe / Shutterstock / Freepik / Canva / Vecteezy / Envato), <strong>kurasi favorit sebelum ZIP</strong>, <strong>import prompt .txt/.csv</strong>, <strong>palet custom</strong>, dan <strong>cek duplikasi</strong>. Untuk <strong>ikon &amp; stiker</strong>, pilih <strong>latar belakang Transparan</strong> agar SVG &amp; PNG-nya tanpa latar dan siap ditempel di mana saja. Unduh satu per satu, atau <strong>semua sekaligus dalam satu file ZIP</strong> (SVG + PNG + daftar keyword untuk upload stock).</p>
+    <p class="lede">Halo Ardian — buat <strong>puluhan sampai ratusan vector SVG</strong> sekaligus untuk microstock. Sekarang bisa <strong>berdasarkan daftar prompt kamu sendiri</strong> (satu baris = satu desain), dengan <strong>nama batch kustom</strong>, pilihan <strong>gaya vector bawaan</strong>, dan <strong>gaya versi kamu sendiri</strong> — misalnya “ukiyo-e, tinta hitam dan merah” — yang jadi prioritas. Kini bisa <strong>diinstal sebagai aplikasi</strong> di Android &amp; laptop, lengkap dengan <strong>rumusan prompt 7 unsur</strong>, <strong>preset &amp; riwayat</strong>, <strong>SEO stock otomatis</strong> (Adobe / Shutterstock / Freepik / Canva / Vecteezy / Envato), <strong>kurasi favorit sebelum ZIP</strong>, <strong>import prompt .txt/.csv</strong>, <strong>palet custom</strong>, dan <strong>cek duplikasi</strong>. Untuk <strong>ikon &amp; stiker</strong>, pilih <strong>latar belakang Transparan</strong> agar SVG &amp; PNG-nya tanpa latar dan siap ditempel di mana saja. Unduh satu per satu, atau <strong>semua sekaligus dalam satu file ZIP</strong> (SVG + PNG + daftar keyword untuk upload stock).</p>
   </header>
 
   <div class="installbar" id="installBar">
@@ -211,6 +220,18 @@ textarea:focus,input[type=text]:focus{outline:2px solid var(--accent);outline-of
         <input type="file" id="importFile" accept=".txt,.csv,text/plain,text/csv" class="hidden">
         <p class="hint" id="importStatus" style="margin-top:6px">File .txt: satu prompt per baris. File .csv: kolom pertama tiap baris dipakai sebagai prompt. Hasil import ditambahkan ke daftar di atas.</p>
         <p class="hint">Tiap baris menjadi 1 desain (dikali jumlah variasi di bawah). Subjek yang dikenali: kucing, anjing, burung, ikan/koi, kupu-kupu, bunga/sakura, pohon, gunung, pantai, ombak, matahari, bulan, bintang, rumah, kota, kopi, hati, gajah, roket, mobil, pesawat, naga, hutan. Prompt lain dibuatkan komposisi abstrak bertema dari kata-katanya.</p>
+        <div class="specbox" id="specBox">
+          <span class="glabel">Rumusan Prompt — 7 unsur</span>
+          <p class="hint">Rumusnya: <b>Subjek + Warna + Aksi/Pose + Setting + Waktu &amp; Suasana + Gaya + Komposisi</b>. Makin lengkap promptmu, makin akurat hasilnya — tiap unsur benar-benar mengubah gambar (pose, warna subjek, setting, suasana), bukan sekadar teks.</p>
+          <div id="specList"><p class="hint" style="margin:0">Tulis prompt dulu — analisis rumusan muncul di sini.</p></div>
+          <div class="rowbtns" style="margin-top:8px">
+            <button class="linkbtn" id="expandPromptBtn" type="button" data-tip="Lengkapi tiap prompt jadi rumusan 7 unsur, memakai gaya dan latar yang sedang aktif.">✨ Perluas prompt jadi rumusan lengkap</button>
+            <button class="linkbtn" id="applySpecBtn" type="button" data-tip="Ganti daftar prompt dengan rumusan lengkap hasil perluasan.">Pakai rumusan ini</button>
+            <button class="linkbtn" id="copySpecBtn" type="button" data-tip="Salin rumusan lengkap ke clipboard.">📋 Salin rumusan</button>
+          </div>
+          <div class="specout hidden" id="specOut"></div>
+          <p class="hint">Contoh rumusan lengkap: “Satu kucing oren duduk tenang di bawah pohon sakura saat pagi, gaya flat modern, komposisi tengah, detail sedang, latar transparan.”</p>
+        </div>
       </div>
 
       <div class="group" id="quickGroup">
@@ -339,6 +360,7 @@ textarea:focus,input[type=text]:focus{outline:2px solid var(--accent);outline-of
       <button class="btn btn-primary" id="genBtn" type="button" data-tip="Buat semua vector sekaligus sesuai pengaturan di atas.">🎲 Generate Vector</button>
       <button class="btn btn-zip" id="zipBtn" type="button" disabled data-tip="Unduh semua hasil sebagai satu file ZIP (SVG + PNG + keywords.csv + file SEO).">⬇ Unduh Semua sebagai ZIP</button>
       <button class="btn btn-ghost" id="regenBtn" type="button" disabled data-tip="Buat ulang semua vector dengan variasi acak baru. Kartu yang dikunci seed-nya tidak berubah.">Variasikan Ulang (seed baru)</button>
+      <button class="btn btn-ghost" id="resetBtn" type="button" data-tip="Reset Generate: kosongkan semua hasil & kembalikan pengaturan generate ke awal. Daftar prompt, preset & riwayat tetap aman.">↺ Reset Generate</button>
       <div class="progress" id="progWrap"><i id="progBar"></i></div>
       <p class="status" id="status">Belum ada vector. Tekan Generate untuk mulai.</p>
     </aside>
@@ -385,6 +407,7 @@ textarea:focus,input[type=text]:focus{outline:2px solid var(--accent);outline-of
           <li>Pakai judul &amp; keyword dari <b>keywords.csv</b> di dalam ZIP untuk tiap file — keyword sudah disesuaikan per jenis desain.</li>
           <li>Generate ulang dengan seed baru untuk memperbanyak variasi satu jenis yang paling laku, dan ganti palet agar seri terlihat berbeda.</li>
           <li><b>Mode Dari Prompt:</b> satu baris = satu desain. Judul file memakai nama batch + slug prompt, dan daftar prompt lengkap tersimpan di <b>prompts.txt</b> dalam ZIP.</li>
+          <li><b>Rumusan Prompt 7 unsur:</b> tulis prompt mengikuti rumus <b>Subjek + Warna + Aksi + Setting + Waktu/Suasana + Gaya + Komposisi</b> — contoh: “Satu kucing oren duduk tenang di bawah pohon sakura saat pagi, gaya flat modern, komposisi tengah, latar transparan.” Analisis di bawah daftar prompt menunjukkan unsur yang sudah ada dan yang masih kurang; tombol <b>✨ Perluas prompt</b> melengkapinya otomatis dari gaya &amp; latar yang sedang aktif. Warna subjek (mis. “oren”), aksi (“duduk”, “terbang”), setting (“di kolam”, “di malam hari”), dan komposisi (“close-up”) benar-benar mengubah gambarnya.</li>
           <li><b>Gaya custom jadi prioritas:</b> tulis gayamu sendiri (mis. “ukiyo-e, tinta hitam dan merah”) — warna &amp; teknik yang disebut di situ mengalahkan gaya bawaan dan palet.</li>
           <li><b>Latar Transparan untuk ikon:</b> pilih <b>Latar belakang → Transparan</b> sebelum Generate, terutama di mode Dari Prompt. Hasilnya SVG tanpa rect latar dan PNG ber-alpha — ikon terlihat di galeri di atas pola papan catur dan siap ditempel ke desain, presentasi, atau paket ikon stock. Untuk background &amp; pola penuh, tetap pakai Latar Berwarna.</li>
           <li><b>Instal aplikasi:</b> pakai tombol <b>Instal Aplikasi</b> di bagian atas (Android Chrome: menu ⋮ → Instal aplikasi). Setelah terinstal, tools terbuka dari layar utama seperti aplikasi biasa.</li>
@@ -392,6 +415,7 @@ textarea:focus,input[type=text]:focus{outline:2px solid var(--accent);outline-of
           <li><b>SEO stock:</b> pilih platform (Adobe Stock / Shutterstock / Freepik / Canva / Vecteezy / Envato) di panel SEO, lalu salin judul + keyword per kartu dengan tombol 📋 SEO. Di dalam ZIP ada <b>seo-adobe-stock.csv</b>, <b>seo-shutterstock.csv</b>, <b>seo-freepik.txt</b>, <b>seo-canva.txt</b>, <b>seo-vecteezy.csv</b>, dan <b>seo-envato.txt</b>.</li>
           <li><b>Canva &amp; platform grafis lain:</b> hasil generate (SVG + PNG) bisa dipakai di Canva, Figma, Adobe Illustrator, Affinity Designer, Inkscape, dan Vecteezy. Di Canva: buka desain → <b>Uploads → Upload files</b> → pilih file SVG atau PNG-nya, lalu pakai sebagai elemen, stiker, atau logo. PNG transparan paling cocok untuk stiker/logo. Catatan: ganti warna di Canva hanya jalan untuk SVG sederhana berisi warna flat; untuk edit vector penuh, buka SVG di Illustrator / Figma / Inkscape. Di panel SEO, pilih <b>Canva</b> untuk menyalin judul + tag yang sesuai, dan di dalam ZIP ada <b>seo-canva.txt</b>.</li>
           <li><b>Kurasi sebelum ZIP:</b> tandai ★ favorit, 🔒 kunci seed desain yang bagus agar tidak berubah saat regenerate, ↻ buat ulang satu kartu saja, ✕ hapus yang jelek — lalu unduh ZIP hanya berisi favorit.</li>
+          <li><b>Reset Generate:</b> tombol <b>↺ Reset Generate</b> di bawah panel Pengaturan mengosongkan galeri hasil dan mengembalikan semua pengaturan generate ke awal (mode, jenis, gaya, palet, ukuran, latar). Daftar prompt, preset, dan riwayat batch <b>tidak</b> ikut dihapus, jadi kamu bisa langsung generate ulang dari prompt yang sama.</li>
           <li><b>Import &amp; ukuran stock:</b> import daftar prompt dari file .txt/.csv, pilih rasio 1:1 / 4:5 / 16:9 / 3:2, dan export PNG sampai 4000 px.</li>
           <li><b>Palet custom &amp; duplikasi:</b> masukkan 5 warna brand kamu di Palet Custom, dan jalankan Cek Duplikasi — kartu yang terlalu mirip dalam satu batch ditandai agar bisa kamu regenerate atau hapus sebelum upload.</li>
           <li>Semua desain digenerate prosedural di browser ini dan unik per file — tidak memakai gambar pihak ketiga.</li>
@@ -670,12 +694,12 @@ var SUBJECTS=[
  {id:"bunga",label:"Bunga",words:["bunga","flower","mawar","rose","tulip"],kw:"flower illustration, floral botanical vector"},
  {id:"pohon",label:"Pohon",words:["pohon","tree"],kw:"tree illustration, nature landscape vector"},
  {id:"gunung",label:"Gunung",words:["gunung","mountain","pegunungan"],kw:"mountain landscape illustration, nature scenery vector"},
- {id:"pantai",label:"Pantai & Laut",words:["pantai","beach","laut","ocean","sea"],kw:"beach seascape illustration, tropical ocean vector"},
+ {id:"pantai",label:"Pantai & Laut",words:["pantai","beach"],kw:"beach seascape illustration, tropical ocean vector"},
  {id:"ombak",label:"Ombak",words:["ombak","wave","tsunami"],kw:"ocean wave illustration, great wave vector"},
  {id:"rumah",label:"Rumah",words:["rumah","house","home"],kw:"house illustration, cozy home vector"},
  {id:"kota",label:"Kota",words:["kota","city","gedung"],kw:"city skyline illustration, urban buildings vector"},
- {id:"matahari",label:"Matahari",words:["matahari","sun","sunrise","sunset","terbit"],kw:"sun illustration, sunrise sunshine vector"},
- {id:"bulan",label:"Bulan & Malam",words:["bulan","moon","malam","night"],kw:"moon and stars illustration, night sky vector"},
+ {id:"matahari",label:"Matahari",words:["matahari","sun","sunrise","sunset"],kw:"sun illustration, sunrise sunshine vector"},
+ {id:"bulan",label:"Bulan & Malam",words:["bulan","moon"],kw:"moon and stars illustration, night sky vector"},
  {id:"bintang",label:"Bintang",words:["bintang","star"],kw:"star illustration, sparkle night vector"},
  {id:"kopi",label:"Kopi",words:["kopi","coffee","cafe"],kw:"coffee cup illustration, cafe drink vector"},
  {id:"hati",label:"Hati",words:["hati","cinta","love","heart"],kw:"heart illustration, love romantic vector"},
@@ -691,6 +715,111 @@ function detectSubject(prompt){
   for(var i=0;i<SUBJECTS.length;i++){var s=SUBJECTS[i];
     for(var j=0;j<s.words.length;j++){if(t.indexOf(s.words[j])>=0)return s}}
   return {id:"abstrak",label:"Komposisi Bertema",words:[],kw:"abstract themed illustration, decorative composition vector"};
+}
+
+/* ---------- Rumusan Prompt 7 unsur ----------
+   Rumus: Subjek + Warna + Aksi/Pose + Setting + Waktu & Suasana + Gaya + Komposisi.
+   Tiap unsur yang terdeteksi benar-benar mengubah gambar di genPromptSVG,
+   bukan sekadar teks: warna subjek mengganti warna utama, aksi mengubah pose/
+   kemiringan & garis gerak, setting menambah elemen latar, waktu menambah
+   matahari/bulan/bintang/hujan, komposisi mengubah skala subjek. */
+var PROMPT_COLORS=[["merah muda","#e5989b","merah muda"],["oren","#e76f51","oren"],["orange","#e76f51","oren"],["merah","#c1272d","merah"],["red","#c1272d","merah"],["biru","#1d4e89","biru"],["blue","#1d4e89","biru"],["pink","#e5989b","pink"],["emas","#c9a227","emas"],["gold","#c9a227","emas"],["hitam","#161616","hitam"],["black","#161616","hitam"],["putih","#f7f3ea","putih"],["white","#f7f3ea","putih"],["hijau","#2d6a4f","hijau"],["green","#2d6a4f","hijau"],["kuning","#f2c230","kuning"],["yellow","#f2c230","kuning"],["ungu","#5b2a86","ungu"],["purple","#5b2a86","ungu"],["cokelat","#6b4226","cokelat"],["coklat","#6b4226","cokelat"],["brown","#6b4226","cokelat"],["abu","#8a8a8a","abu-abu"],["tosca","#2a9d8f","tosca"],["teal","#2a9d8f","tosca"],["marun","#7b1e26","marun"],["krem","#e9dcc3","krem"],["cream","#e9dcc3","krem"]];
+var PROMPT_ACTIONS=[["duduk","duduk","sitting",0,0.05,1],["berdiri","berdiri","standing",0,-0.02,1],["berlari","berlari","running",-12,0,1],["lari","berlari","running",-12,0,1],["terbang","terbang","flying",-8,-0.12,1],["meluncur","meluncur","launching",-8,-0.12,1],["melompat","melompat","jumping",-6,-0.10,1],["lompat","melompat","jumping",-6,-0.10,1],["tidur","tidur","sleeping",0,0.08,0.95],["berenang","berenang","swimming",-10,0.02,1],["bermain","bermain","playing",5,0,1],["main","bermain","playing",5,0,1],["berjalan","berjalan","walking",-4,0,1],["jalan","berjalan","walking",-4,0,1],["memanjat","memanjat","climbing",8,-0.04,1],["makan","makan","eating",4,0.03,1],["menari","menari","dancing",6,-0.03,1],["melayang","melayang","floating",0,-0.14,1],["bersantai","bersantai","relaxing",0,0.05,1],["santai","bersantai","relaxing",0,0.05,1]];
+var PROMPT_SETTINGS=[["sakura","sakura","cherry blossom"],["pantai","pantai","beach"],["laut","laut","ocean sea"],["hutan","hutan","forest"],["taman","taman","garden"],["kolam","kolam","pond"],["gunung","gunung","mountain"],["kota","kota","city"],["langit","langit","sky"],["padang","padang","meadow"],["rumah","rumah","home"],["kafe","kafe","cafe"],["sawah","sawah","rice field"],["sungai","sungai","river"],["gurun","gurun","desert"],["salju","salju","snow"],["pasar","pasar","market"]];
+var PROMPT_TIMES=[["pagi","pagi","morning"],["siang","siang","midday"],["sore","sore","afternoon"],["senja","senja","sunset"],["malam","malam","night"],["cerah","cerah","sunny"],["hujan","hujan","rainy"]];
+var PROMPT_MOODS=[["ceria","ceria","cheerful"],["tenang","tenang","calm"],["damai","tenang","calm"],["misterius","misterius","mysterious"],["romantis","romantis","romantic"],["sunyi","sunyi","quiet"]];
+var PROMPT_COMPS=[["close-up","close-up","close-up portrait"],["close up","close-up","close-up portrait"],["dekat","close-up","close-up portrait"],["tengah","tengah","centered composition"],["simetris","simetris","symmetrical composition"],["penuh","penuh","full frame"],["minimal","minimal","minimal composition"],["sederhana","minimal","minimal composition"],["ramai","ramai","detailed busy composition"],["detail","ramai","detailed busy composition"]];
+function findWord(t,list){for(var i=0;i<list.length;i++){if(t.indexOf(list[i][0])>=0)return list[i];}return null;}
+function parsePrompt(line){
+  var t=" "+(line||"").toLowerCase()+" ";
+  var subj=detectSubject(line);
+  var col=findWord(t,PROMPT_COLORS);
+  var act=findWord(t,PROMPT_ACTIONS);
+  var setg=findWord(t,PROMPT_SETTINGS);
+  var time=findWord(t,PROMPT_TIMES);
+  var mood=findWord(t,PROMPT_MOODS);
+  var comp=findWord(t,PROMPT_COMPS);
+  var count=1,countLabel="satu";
+  if(t.indexOf("sepasang")>=0||t.indexOf("dua")>=0){count=2;countLabel="dua";}
+  else if(t.indexOf("tiga")>=0){count=3;countLabel="tiga";}
+  else if(t.indexOf("sekelompok")>=0||t.indexOf("kelompok")>=0||t.indexOf("banyak")>=0){count=3;countLabel="sekelompok";}
+  var eff=getEffectiveStyle();
+  var hasStyle=($("customStyle").value.trim().length>0)||(state.style&&state.style!=="bebas");
+  var score=0;if(subj.id!=="abstrak")score++;if(col)score++;if(act)score++;if(setg)score++;if(time||mood)score++;if(hasStyle)score++;if(comp)score++;
+  return {raw:line,subj:subj,color:col?col[1]:null,colorName:col?col[2]:null,action:act?act[1]:null,actionKw:act?act[2]:null,tilt:act?act[3]:0,lift:act?act[4]:0,poseScale:act?act[5]:1,setting:setg?setg[1]:null,settingKw:setg?setg[2]:null,time:time?time[1]:null,timeKw:time?time[2]:null,mood:mood?mood[1]:null,moodKw:mood?mood[2]:null,comp:comp?comp[1]:null,compKw:comp?comp[2]:null,count:count,countLabel:countLabel,hasStyle:hasStyle,score:score,styleName:eff.name};
+}
+function settingOverlay(spec,r,w,h,pal){
+  if(!spec||!spec.setting)return "";
+  var u=Math.min(w,h),cx=w/2,cy=h/2,c0=pal[0],c1=pal[1%pal.length],c2=pal[2%pal.length],cL=pal[pal.length-1],s="";
+  if(spec.setting==="sakura"){for(var k=0;k<14;k++)s+='<ellipse cx="'+r.n(w*0.05,w*0.95).toFixed(0)+'" cy="'+r.n(h*0.1,h*0.9).toFixed(0)+'" rx="'+(u*0.016)+'" ry="'+(u*0.009)+'" fill="'+c1+'" opacity="0.8" transform="rotate('+r.i(0,180)+' 0 0)"/>';}
+  else if(spec.setting==="pantai"||spec.setting==="laut"){s='<path d="'+wavePath(r,w,h*0.82,h*0.025,w*0.3)+' L'+w+','+h+' L0,'+h+' Z" fill="'+c0+'" opacity="0.55"/>';}
+  else if(spec.setting==="hutan"){[[0.1,0.9,0.9],[0.88,0.92,1.1]].forEach(function(tp){s+='<g transform="translate('+(w*tp[0]).toFixed(0)+' '+(h*tp[1]).toFixed(0)+') scale('+tp[2]+')"><polygon points="0,-110 -32,-48 32,-48" fill="'+c0+'"/><polygon points="0,-84 -28,-30 28,-30" fill="'+c0+'"/></g>';});}
+  else if(spec.setting==="taman"){[[0.14,0.86],[0.86,0.88],[0.5,0.93]].forEach(function(fp){s+='<circle cx="'+(w*fp[0]).toFixed(0)+'" cy="'+(h*fp[1]).toFixed(0)+'" r="'+(u*0.02)+'" fill="'+c1+'"/><circle cx="'+(w*fp[0]).toFixed(0)+'" cy="'+(h*fp[1]).toFixed(0)+'" r="'+(u*0.009)+'" fill="'+c2+'"/>';});}
+  else if(spec.setting==="kolam"){for(var q=0;q<3;q++)s+='<ellipse cx="'+cx+'" cy="'+(cy+u*0.3)+'" rx="'+(u*(0.2+q*0.09))+'" ry="'+(u*0.035)+'" fill="none" stroke="'+cL+'" stroke-width="3" opacity="0.5"/>';}
+  else if(spec.setting==="gunung"){s='<polygon points="0,'+(h*0.9)+' '+(w*0.16)+','+(h*0.55)+' '+(w*0.34)+','+(h*0.9)+'" fill="'+c0+'" opacity="0.5"/><polygon points="'+(w*0.66)+','+(h*0.9)+' '+(w*0.84)+','+(h*0.5)+' '+w+','+(h*0.9)+'" fill="'+c0+'" opacity="0.5"/>';}
+  else if(spec.setting==="kota"){var bx=w*0.06;while(bx<w*0.94){var bh=r.n(h*0.12,h*0.3);s+='<rect x="'+bx.toFixed(0)+'" y="'+(h*0.92-bh).toFixed(0)+'" width="'+(u*0.07)+'" height="'+bh.toFixed(0)+'" fill="'+c0+'" opacity="0.45"/>';bx+=u*0.09;}}
+  else if(spec.setting==="langit"){for(var c=0;c<2;c++){var qx=r.n(w*0.12,w*0.8),qy=r.n(h*0.08,h*0.25),qs=r.n(u*0.04,u*0.07);s+='<ellipse cx="'+qx.toFixed(0)+'" cy="'+qy.toFixed(0)+'" rx="'+qs.toFixed(0)+'" ry="'+(qs*0.45).toFixed(0)+'" fill="'+cL+'" opacity="0.85"/>';}}
+  else if(spec.setting==="padang"||spec.setting==="sawah"){for(var g=0;g<14;g++){var gx=r.n(w*0.05,w*0.95);s+='<path d="M'+gx.toFixed(0)+','+(h*0.96)+' Q'+gx.toFixed(0)+','+(h*0.88)+' '+(gx+8)+','+(h*0.84)+'" stroke="'+c0+'" stroke-width="3" fill="none" opacity="0.6"/>';}}
+  else if(spec.setting==="salju"){for(var sn=0;sn<22;sn++)s+='<circle cx="'+r.n(0,w).toFixed(0)+'" cy="'+r.n(0,h*0.6).toFixed(0)+'" r="'+r.n(2,6).toFixed(1)+'" fill="'+cL+'" opacity="0.85"/>';}
+  else if(spec.setting==="gurun"){s='<path d="M0,'+(h*0.9)+' Q'+(w*0.5)+','+(h*0.72)+' '+w+','+(h*0.88)+' L'+w+','+h+' L0,'+h+' Z" fill="'+c2+'" opacity="0.6"/>';}
+  return s;
+}
+function timeOverlay(spec,r,w,h,pal){
+  if(!spec||(!spec.time&&!spec.mood))return "";
+  var u=Math.min(w,h),c2=pal[2%pal.length],cL=pal[pal.length-1],s="";
+  if(spec.time==="malam"){for(var k=0;k<12;k++)s+='<circle cx="'+r.n(w*0.05,w*0.95).toFixed(0)+'" cy="'+r.n(h*0.04,h*0.45).toFixed(0)+'" r="'+r.n(2,5).toFixed(1)+'" fill="'+cL+'"/>';s+='<circle cx="'+(w*0.84)+'" cy="'+(h*0.13)+'" r="'+(u*0.045)+'" fill="'+c2+'" opacity="0.9"/>';}
+  else if(spec.time==="pagi"||spec.time==="siang"||spec.time==="cerah"){s+='<circle cx="'+(w*0.16)+'" cy="'+(h*0.13)+'" r="'+(u*0.05)+'" fill="'+c2+'" opacity="0.9"/>';}
+  else if(spec.time==="senja"||spec.time==="sore"){s+='<circle cx="'+(w*0.5)+'" cy="'+(h*0.24)+'" r="'+(u*0.07)+'" fill="'+pal[1%pal.length]+'" opacity="0.9"/>';}
+  else if(spec.time==="hujan"){for(var d=0;d<14;d++){var hx=r.n(w*0.05,w*0.95),hy=r.n(h*0.05,h*0.6);s+='<path d="M'+hx.toFixed(0)+','+hy.toFixed(0)+' l-8,22" stroke="'+cL+'" stroke-width="3" opacity="0.55" stroke-linecap="round"/>';}}
+  if(spec.mood==="romantis"){s+='<path d="M'+(w*0.14)+','+(h*0.2)+' c-14,-12 -30,2 -16,16 l16,12 l16,-12 c14,-14 -2,-28 -16,-16z" fill="'+pal[1%pal.length]+'" opacity="0.85" transform="scale(0.8)"/>';}
+  return s;
+}
+function buildExpandedPrompt(line){
+  var spec=parsePrompt(line);
+  var eff=getEffectiveStyle();
+  var subjLabel=spec.subj.label;
+  var parts=[];
+  parts.push((spec.count>1?spec.countLabel+" ":"Satu ")+subjLabel.toLowerCase()+(spec.colorName?" "+spec.colorName:""));
+  parts.push(spec.action?spec.action:(spec.subj.id==="abstrak"?"dalam komposisi abstrak":"dalam pose alami"));
+  parts.push(spec.setting?("di "+(spec.setting==="sakura"?"bawah pohon sakura":spec.setting==="laut"?"laut lepas":spec.setting==="langit"?"langit terbuka":spec.setting)):(spec.subj.id==="abstrak"?"dengan latar sederhana":"dengan latar polos"));
+  parts.push(spec.time?("saat "+spec.time):"suasana cerah");
+  if(spec.mood)parts.push("suasana "+spec.mood);
+  parts.push("gaya "+eff.name);
+  parts.push("komposisi "+(spec.comp||"tengah"));
+  parts.push("detail "+(state.complexity==="low"?"sederhana":state.complexity==="high"?"detail":"sedang"));
+  parts.push("latar "+(state.transparent?"transparan":"berwarna"));
+  var s2=parts.join(", ");
+  return s2.charAt(0).toUpperCase()+s2.slice(1);
+}
+function specChips(spec){
+  function chip(ok,label){return '<span class="specchip'+(ok?"":" miss")+'">'+(ok?"✓ ":"? ")+esc(label)+'</span>';}
+  var out="";
+  out+=chip(spec.subj.id!=="abstrak","Subjek: "+spec.subj.label);
+  out+=chip(!!spec.color,"Warna: "+(spec.colorName||"—"));
+  out+=chip(!!spec.action,"Aksi: "+(spec.action||"—"));
+  out+=chip(!!spec.setting,"Setting: "+(spec.setting||"—"));
+  out+=chip(!!(spec.time||spec.mood),"Waktu: "+(spec.time||spec.mood||"—"));
+  out+=chip(spec.hasStyle,"Gaya: "+spec.styleName);
+  out+=chip(!!spec.comp,"Komposisi: "+(spec.comp||"—"));
+  return out;
+}
+function renderSpecAnalysis(){
+  var box=$("specList");if(!box)return;
+  var lines=promptLines();
+  if(!lines.length){box.innerHTML='<p class="hint" style="margin:0">Tulis prompt dulu — analisis rumusan muncul di sini.</p>';return;}
+  var html="";
+  lines.slice(0,6).forEach(function(line,i){
+    var spec=parsePrompt(line);
+    var missing=[];
+    if(spec.subj.id==="abstrak")missing.push("subjek dikenali");
+    if(!spec.action)missing.push("aksi/pose");
+    if(!spec.setting)missing.push("setting");
+    if(!spec.time&&!spec.mood)missing.push("waktu/suasana");
+    if(!spec.comp)missing.push("komposisi");
+    html+='<div class="specline"><b>'+(i+1)+'. '+esc(line)+'</b><br>'+specChips(spec)+'<br><span class="specscore">Kelengkapan: '+spec.score+'/7 unsur</span>'+(missing.length?' <span style="color:var(--muted)">· tambah: '+esc(missing.join(", "))+'</span>':' <span style="color:var(--muted)">· rumusan lengkap ✓</span>')+'</div>';
+  });
+  if(lines.length>6)html+='<p class="hint">…dan '+(lines.length-6)+' prompt lagi (analisis menampilkan 6 pertama).</p>';
+  box.innerHTML=html;
 }
 
 /* ---------- Style texture overlay ---------- */
@@ -963,8 +1092,28 @@ function drawSubject(subj,r,w,h,pal,eff){
   }
   return B;
 }
-function genPromptSVG(r,w,h,pal,uid,eff,subjId){
-  var body=drawSubject(subjId,r,w,h,pal,eff);
+function cloneEff(eff){var o={};for(var k in eff)o[k]=eff[k];return o;}
+function genPromptSVG(r,w,h,pal,uid,eff,subjId,spec,seed){
+  var eff2=(spec&&spec.comp==="minimal")?cloneEff(eff):eff;
+  if(eff2!==eff)eff2.minimal=true;
+  var body=drawSubject(subjId,r,w,h,pal,eff2);
+  var u=Math.min(w,h),cx=w/2,cy=h/2;
+  if(spec){
+    var sc=spec.poseScale||1;
+    if(spec.comp==="close-up")sc=sc*1.3;else if(spec.comp==="penuh")sc=sc*1.15;
+    if(spec.comp==="simetris")spec.tilt=0;
+    var dy=Math.round((spec.lift||0)*u);
+    if(dy||spec.tilt||sc!==1)body='<g transform="translate(0 '+dy+') rotate('+(spec.tilt||0)+' '+cx+' '+cy+')"><g transform="translate('+cx+' '+cy+') scale('+sc.toFixed(2)+') translate('+(-cx)+' '+(-cy)+')">'+body+'</g></g>';
+    if(spec.action==="berlari"||spec.action==="terbang"){var ml="";for(var m=0;m<3;m++)ml+='<path d="M'+(w*0.08)+' '+(cy-u*0.14+m*u*0.07)+' L'+(w*0.3)+' '+(cy-u*0.14+m*u*0.07)+'" stroke="'+pal[pal.length-1]+'" stroke-width="4" opacity="0.5" stroke-linecap="round"/>';body=ml+body;}
+    if(spec.count>=2){
+      var r2=new RNG((seed||1)+77);
+      var mini=drawSubject(subjId,r2,w,h,pal,eff2);
+      var mx=cx+u*0.42,my=cy+u*0.30;
+      body+='<g transform="translate('+mx.toFixed(0)+' '+my.toFixed(0)+') scale(0.42) translate('+(-cx)+' '+(-cy)+')">'+mini+'</g>';
+      if(spec.count>=3){var r3=new RNG((seed||1)+177);var mini2=drawSubject(subjId,r3,w,h,pal,eff2);var mx2=cx-u*0.44,my2=cy+u*0.32;body+='<g transform="translate('+mx2.toFixed(0)+' '+my2.toFixed(0)+') scale(0.38) translate('+(-cx)+' '+(-cy)+')">'+mini2+'</g>';}
+    }
+    body+=settingOverlay(spec,r,w,h,pal)+timeOverlay(spec,r,w,h,pal);
+  }
   var bg=eff.bg||pal[pal.length-1];
   var svg=svgDoc(w,h,uid,"",body,bg);
   return injectOverlay(svg,r,w,h,eff,pal);
@@ -1032,10 +1181,10 @@ function updateBatchPreview(){
   $("batchPreview").textContent=hasBatch()?batchSlug()+"-…-file.zip":"vector-massal-…-file.zip";
 }
 $("batchName").addEventListener("input",updateBatchPreview);updateBatchPreview();
-$("promptList").addEventListener("input",updateTotal);
+$("promptList").addEventListener("input",function(){updateTotal();renderSpecAnalysis();});
 $("exPrompt").addEventListener("click",function(){
-  $("promptList").value="Kucing oren duduk di bawah pohon sakura\nOmbak besar di laut lepas\nGunung dan matahari terbit\nSecangkir kopi hangat di pagi hari\nKupu-kupu di taman bunga\nKota kecil di malam berbintang\nIkan koi di kolam tenang\nRoket meluncur ke luar angkasa";
-  updateTotal();
+  $("promptList").value="Satu kucing oren duduk tenang di bawah pohon sakura saat pagi, gaya flat modern, komposisi tengah, latar transparan\nIkan koi berenang di kolam tenang saat senja, gaya ukiyo-e, komposisi tengah\nOmbak besar di laut lepas saat siang, gaya flat modern, komposisi penuh\nGunung dan matahari terbit di pagi hari, suasana tenang, komposisi simetris\nSecangkir kopi hangat di kafe saat pagi, gaya minimalis, komposisi close-up\nKupu-kupu terbang di taman bunga saat siang, suasana ceria, komposisi tengah\nKota kecil di malam berbintang, gaya neon, komposisi penuh\nRoket meluncur ke luar angkasa saat malam, gaya flat modern, komposisi tengah";
+  updateTotal();renderSpecAnalysis();
 });
 var styleGrid=$("styleGrid");
 STYLES.forEach(function(s){
@@ -1133,18 +1282,20 @@ function generateFromPrompts(){
   var prefix=hasBatch()?batchSlug()+"-":"";
   var items=[],idx=0;
   lines.forEach(function(line,li){
-    var subj=detectSubject(line);
+    var spec=parsePrompt(line);
+    var subj=spec.subj;
     for(var j=0;j<per;j++){
       if(items.length>=240)break;
       idx++;
       var seed=(hashStr(line.toLowerCase()) ^ (state.seedBase + idx*7919))>>>0;
       var r=new RNG(seed);
       var rp=resolvePalette(r,eff,palChoice);var palObj=rp.palObj,pal=rp.pal;
+      if(spec.color){var pc=[spec.color];pal.forEach(function(c){if(pc.indexOf(c)<0&&pc.length<5)pc.push(c)});pal=pc;}
       var uid="p"+idx+"s"+(seed%9973)+"_";
-      var svg=genPromptSVG(r,W,H,pal,uid,eff,subj.id);
+      var svg=genPromptSVG(r,W,H,pal,uid,eff,subj.id,spec,seed);
       var base=prefix+String(li+1).padStart(2,"0")+"-"+slugify(line)+"-"+String(j+1).padStart(3,"0");
-      items.push({id:++state.itemSeq,seed:seed,subjId:subj.id,fav:false,locked:false,key:"sub-"+subj.id,type:"Prompt · "+subj.label,palette:palObj,colors:pal,w:W,h:H,svg:svg,prompt:line,styleName:eff.name,transparent:!!state.transparent,
-        base:base,kw:subj.kw+", "+eff.kw+", vector illustration, stock illustration"+(state.transparent?", transparent background, isolated icon on transparent, png with alpha, sticker, clipart":""),
+      items.push({id:++state.itemSeq,seed:seed,subjId:subj.id,fav:false,locked:false,key:"sub-"+subj.id,type:"Prompt · "+subj.label,palette:palObj,colors:pal,w:W,h:H,svg:svg,prompt:line,spec:spec,styleName:eff.name,transparent:!!state.transparent,
+        base:base,kw:subj.kw+", "+eff.kw+(spec.actionKw?", "+spec.actionKw:"")+(spec.settingKw?", "+spec.settingKw:"")+(spec.timeKw?", "+spec.timeKw:"")+(spec.moodKw?", "+spec.moodKw:"")+(spec.compKw?", "+spec.compKw:"")+", vector illustration, stock illustration"+(state.transparent?", transparent background, isolated icon on transparent, png with alpha, sticker, clipart":""),
         title:line.charAt(0).toUpperCase()+line.slice(1)+" — "+eff.name});
     }
   });
@@ -1181,7 +1332,7 @@ function drawCards(){
     var dupTag=state.dupMap[it.id]?'<span class="tag dup">⚠ Mirip: '+esc(state.dupMap[it.id])+'</span>':'';
     card.innerHTML='<div class="thumb'+(it.transparent?' checker':'')+'">'+it.svg+'</div><div class="cardbody">'
       +'<div class="fname">'+it.base+'.svg</div>'
-      +(it.prompt?'<div class="promptline">“'+esc(it.prompt)+'”</div>':'')
+      +(it.prompt?'<div class="promptline">“'+esc(it.prompt)+'”</div>':'')+(it.spec?'<div class="promptline">Rumusan: '+it.spec.score+'/7 unsur'+(it.spec.action?' · '+esc(it.spec.action):'')+(it.spec.setting?' · '+esc(it.spec.setting):'')+(it.spec.time?' · '+esc(it.spec.time):'')+(it.spec.colorName?' · '+esc(it.spec.colorName):'')+'</div>':'')
       +'<div class="tags"><span class="tag">'+esc(it.type)+'</span>'+(it.transparent?'<span class="tag">⬜ Latar Transparan</span>':'<span class="tag">Latar Berwarna</span>')+(it.styleName?'<span class="tag">'+esc(it.styleName)+'</span>':'')+dupTag+'<span class="tag"><span class="paldots">'+dots+'</span>&nbsp;'+esc(it.palette.name)+'</span></div>'
       +'<div class="cardbtns"><button type="button" data-a="svg" data-tip="Unduh file vector SVG kartu ini — bisa diedit di Illustrator, Figma, atau Canva.">⬇ SVG</button><button type="button" data-a="png" data-tip="Unduh gambar PNG kartu ini.">⬇ PNG</button></div>'
       +'<div class="cardbtns2"><button type="button" data-a="fav" data-tip="Tandai sebagai favorit — bisa diunduh terpisah sebagai ZIP hanya favorit." class="'+(it.fav?"on":"")+'">'+(it.fav?"★ Favorit":"☆ Favorit")+'</button><button type="button" data-a="lock" data-tip="Kunci variasi ini supaya tidak berubah saat Variasikan Ulang." class="'+(it.locked?"on":"")+'">'+(it.locked?"🔒 Terkunci":"🔓 Kunci seed")+'</button><button type="button" data-a="regen" data-tip="Buat ulang kartu ini dengan variasi baru.">↻ Regen</button></div>'
@@ -1413,8 +1564,9 @@ function regenerateOne(it){
   var newSeed=(Date.now()+Math.floor(Math.random()*99991)+it.id*104729)>>>0;
   var r=new RNG(newSeed);
   var rp=resolvePalette(r,eff,palChoice);var pal=rp.pal;
+  if(it.spec&&it.spec.color){var pc2=[it.spec.color];pal.forEach(function(c){if(pc2.indexOf(c)<0&&pc2.length<5)pc2.push(c)});pal=pc2;}
   var uid="r"+it.id+"s"+(newSeed%9973)+"_";
-  if(it.subjId){it.svg=genPromptSVG(r,W,H,pal,uid,eff,it.subjId);}
+  if(it.subjId){it.svg=genPromptSVG(r,W,H,pal,uid,eff,it.subjId,it.spec||parsePrompt(it.prompt||""),newSeed);}
   else if(GENS[it.key]){var s2=GENS[it.key].fn(r,W,H,pal,uid,cx);it.svg=injectOverlay(s2,r,W,H,eff,pal);}
   else{setStatus("Kartu ini tidak bisa di-regenerate.");TRANSPARENT_BG=!!state.transparent;return;}
   it.seed=newSeed;it.colors=pal;it.palette=rp.palObj;delete state.dupMap[it.id];
@@ -1547,7 +1699,7 @@ $("importFile").addEventListener("change",function(){
     var cur=$("promptList").value.trim();
     $("promptList").value=(cur?cur+"\n":"")+lines.join("\n");
     if(state.mode!=="prompt"){$("modeSeg").querySelectorAll("button").forEach(function(x){if(x.dataset.v==="prompt")x.click();});}
-    updateTotal();
+    updateTotal();renderSpecAnalysis();
     $("importStatus").textContent="✅ "+lines.length+" prompt diimport dari "+file.name+" — total sekarang "+promptLines().length+" prompt.";
     setStatus(lines.length+" prompt berhasil diimport dari "+file.name+".");
   };
@@ -1560,6 +1712,49 @@ $("customPalSeg").querySelectorAll("button").forEach(function(b){b.addEventListe
   setStatus(state.customPal?"Palet custom aktif — 5 warna brand kamu dipakai untuk Generate berikutnya (kecuali gaya custom menulis warna sendiri).":"Palet bawaan aktif kembali.");
 });});
 $("customPalRow").querySelectorAll("input[type=color]").forEach(function(inp){inp.addEventListener("input",function(){if(!state.customPal){$("customPalSeg").querySelectorAll("button").forEach(function(x){if(x.dataset.v==="on")x.click();});}});});
+
+/* ---------- Rumusan Prompt: perluas / pakai / salin ---------- */
+function expandedPrompts(){return promptLines().map(function(l){return buildExpandedPrompt(l)});}
+$("expandPromptBtn").addEventListener("click",function(){
+  var lines=promptLines();
+  if(!lines.length){setStatus("Tulis minimal satu prompt dulu, lalu tekan Perluas prompt.");return;}
+  var out=expandedPrompts();
+  $("specOut").textContent=out.join("\n");
+  $("specOut").classList.remove("hidden");
+  setStatus("Rumusan lengkap dibuat untuk "+lines.length+" prompt — cek di bawah, lalu tekan \u201cPakai rumusan ini\u201d atau \u201cSalin rumusan\u201d.");
+});
+$("applySpecBtn").addEventListener("click",function(){
+  var out=$("specOut").textContent.trim();
+  if(!out){setStatus("Tekan \u201c\u2728 Perluas prompt\u201d dulu untuk membuat rumusannya.");return;}
+  $("promptList").value=out;
+  updateTotal();renderSpecAnalysis();
+  setStatus("Daftar prompt diganti dengan rumusan lengkap 7 unsur. Tekan Generate untuk melihat hasilnya.");
+});
+$("copySpecBtn").addEventListener("click",function(){
+  var out=$("specOut").textContent.trim()||expandedPrompts().join("\n");
+  if(!out){setStatus("Tulis minimal satu prompt dulu.");return;}
+  function done(){setStatus("Rumusan prompt disalin ke clipboard.");}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(out).then(done,function(){fallbackCopy(out);done();});}
+  else{fallbackCopy(out);done();}
+});
+function fallbackCopy(text){var ta=document.createElement("textarea");ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");}catch(e){}ta.remove();}
+renderSpecAnalysis();
+
+/* ---------- Reset Generate ---------- */
+$("resetBtn").addEventListener("click",function(){
+  var hadItems=state.items.length>0;
+  state.items=[];state.dupMap={};state.favOnly=false;state.seedBase=Date.now();state.itemSeq=0;
+  var favBtn=$("favFilterBtn");if(favBtn)favBtn.classList.remove("on");
+  var defaults={mode:"cepat",batch:"",prompts:$("promptList").value,per:5,size:"4000x2250",pal:"acak",customPal:false,customPalColors:null,bg:false,style:"bebas",customStyle:"",complexity:"med",png:"2000",types:TYPE_KEYS.slice()};
+  applySnapshot(defaults);
+  state.formats=new Set(["svg","png"]);
+  $("fmtSeg").querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed","true");x.textContent=(x.dataset.v==="svg"?"SVG \u2713":"PNG \u2713");});
+  renderGallery();updateSeoPreview();
+  $("zipBtn").disabled=true;$("regenBtn").disabled=true;
+  setProgress(0,false);
+  saveStore();
+  setStatus(hadItems?"Reset Generate selesai: galeri dikosongkan dan pengaturan generate kembali ke awal. Daftar prompt, preset & riwayat tetap aman \u2014 tekan Generate untuk mulai batch baru.":"Sudah bersih: belum ada hasil generate dan pengaturan sudah di awal. Daftar prompt, preset & riwayat tetap aman.");
+});
 
 /* ---------- Installable (PWA) ---------- */
 window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();deferredPrompt=e;$("installBtn").textContent="⬇ Instal Aplikasi";});

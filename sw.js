@@ -1,5 +1,5 @@
 /* Service worker — cache shell + library ZIP agar web app bisa dibuka & dipakai offline setelah kunjungan pertama */
-var CACHE = "vector-massal-v8";
+var CACHE = "vector-massal-v9";
 var CORE = [
   "./index.html",
   "manifest.webmanifest",
